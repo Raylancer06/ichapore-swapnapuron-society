@@ -85,7 +85,7 @@ $addr   = swapnapuron_opt('swapnapuron_address', '41 Jatin Das Road, Ichapore Ma
       </div>
 
       <div class="pt-4 d-flex flex-column flex-sm-row align-items-center justify-content-between gap-2 small text-white-50 text-center text-sm-start">
-        <span>&copy; <?php echo esc_html($site_name); ?>. <?php esc_html_e('All rights reserved.', 'ichapore-swapnapuron'); ?></span>
+        <span>&copy; <?php echo esc_html($site_name); ?>. <?php esc_html_e('All rights reserved.', 'ichapore-swapnapuron'); ?> &bull; <?php esc_html_e('Developed by', 'ichapore-swapnapuron'); ?> <a href="https://raylancer.com/" target="_blank" rel="noopener" class="text-white text-decoration-none fw-semibold">Raylancer Services</a></span>
         <a href="#top" class="text-light text-decoration-none fw-semibold"><?php esc_html_e('Back to Top ↑', 'ichapore-swapnapuron'); ?></a>
       </div>
     </div>

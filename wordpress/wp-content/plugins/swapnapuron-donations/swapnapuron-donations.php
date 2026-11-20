@@ -4,8 +4,8 @@
  * Plugin URI: https://www.ichaporeswapnapuronsociety.org/
  * Description: Dedicated Indian donation gateway powered by Razorpay (UPI, GPay, PhonePe, Cards, Netbanking) with automated Section 80G Tax Exemption Certificates (Form 10BE compliant), Donor PAN validation, Admin Ledger, and Form 10BD CSV export.
  * Version: 1.0.0
- * Author: Ichapore Swapnapuron Society
- * Author URI: https://www.ichaporeswapnapuronsociety.org/
+ * Author: Raylancer Services
+ * Author URI: https://raylancer.com/
  * Text Domain: swapnapuron-donations
  * Domain Path: /languages
  */
