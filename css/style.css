@@ -84,25 +84,64 @@ body {
 }
 
 .dropdown-menu-editorial {
-  border-radius: 1rem;
-  border: 1px solid var(--sand-300);
-  box-shadow: 0 12px 28px rgba(18, 24, 27, 0.08);
-  background: #fff;
-  padding: 0.5rem;
+  border-radius: 1.25rem !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 16px 40px rgba(18, 24, 27, 0.12), 0 4px 12px rgba(18, 24, 27, 0.04) !important;
+  background: #ffffff !important;
+  padding: 0.65rem !important;
+  min-width: 275px !important;
+  margin-top: 0.4rem !important;
+  animation: dropdownFadeIn 0.2s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .dropdown-item-editorial {
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0.6rem 1rem;
-  border-radius: 0.6rem;
-  color: var(--charcoal-900);
-  transition: all 0.15s ease;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  padding: 0.65rem 1rem !important;
+  border-radius: 0.75rem !important;
+  color: var(--charcoal-900, #12181b) !important;
+  display: flex !important;
+  align-items: center !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  margin-bottom: 2px !important;
 }
 
-.dropdown-item-editorial:hover {
-  background-color: var(--terracotta-50);
-  color: var(--terracotta-600);
+.dropdown-item-editorial::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--terracotta-500, #dc3e26);
+  opacity: 0;
+  margin-right: 8px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.dropdown-item-editorial:hover::before,
+.dropdown-item-editorial:focus::before,
+.dropdown-item-editorial.active::before {
+  opacity: 1;
+}
+
+.dropdown-item-editorial:hover,
+.dropdown-item-editorial:focus,
+.dropdown-item-editorial.active {
+  background-color: var(--terracotta-50, #fdf4f2) !important;
+  color: var(--terracotta-600, #dc3e26) !important;
+  transform: translateX(4px) !important;
+  font-weight: 700 !important;
+}
+
+.dropdown-divider {
+  border-color: rgba(0, 0, 0, 0.06) !important;
+  margin: 0.45rem 0.5rem !important;
 }
 
 /* Buttons */

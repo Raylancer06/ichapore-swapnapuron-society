@@ -96,7 +96,7 @@ $site_desc = swapnapuron_site_desc();
               <a class="nav-link nav-link-editorial px-3 px-lg-2 py-2 rounded-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <?php esc_html_e('About Us', 'ichapore-swapnapuron'); ?>
               </a>
-              <ul class="dropdown-menu dropdown-menu-editorial shadow-sm border-0 p-2">
+              <ul class="dropdown-menu dropdown-menu-editorial shadow">
                 <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/who-we-are')); ?>"><?php esc_html_e('Who We Are', 'ichapore-swapnapuron'); ?></a></li>
                 <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/mission-vision')); ?>"><?php esc_html_e('Mission & Vision', 'ichapore-swapnapuron'); ?></a></li>
                 <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/our-team')); ?>"><?php esc_html_e('Our Team', 'ichapore-swapnapuron'); ?></a></li>
@@ -107,7 +107,7 @@ $site_desc = swapnapuron_site_desc();
               <a class="nav-link nav-link-editorial px-3 px-lg-2 py-2 rounded-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <?php esc_html_e('Our Projects', 'ichapore-swapnapuron'); ?>
               </a>
-              <ul class="dropdown-menu dropdown-menu-editorial shadow-sm border-0 p-2">
+              <ul class="dropdown-menu dropdown-menu-editorial shadow">
                 <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/swasthya-chakra/')); ?>">Swasthya Chakra (Healthcare)</a></li>
                 <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/janmataru/')); ?>">Janmataru (Green Newborns)</a></li>
                 <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/ayushman-bhava/')); ?>">Ayushman Bhava (Street Animals)</a></li>

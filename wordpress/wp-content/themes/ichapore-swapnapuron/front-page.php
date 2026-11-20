@@ -371,7 +371,8 @@ $addr   = swapnapuron_opt('swapnapuron_address', '41 Jatin Das Road, Ichapore Ma
         </p>
       </div>
 
-      <div class="bg-white text-dark rounded-4 p-4 p-sm-5 shadow-lg">
+      <div class="bg-white text-dark rounded-4 p-4 p-sm-5 shadow-lg position-relative swapnapuron-donation-widget" data-initiative="General Frontline Fund">
+        <!-- Frequency Selector & Badge -->
         <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3 pb-4 border-bottom">
           <div class="freq-pill d-inline-flex">
             <button type="button" class="freq-btn active" id="freq-monthly" onclick="setHomeFreq('monthly')"><?php esc_html_e('Monthly Support', 'ichapore-swapnapuron'); ?></button>
@@ -379,40 +380,125 @@ $addr   = swapnapuron_opt('swapnapuron_address', '41 Jatin Das Road, Ichapore Ma
           </div>
           <div class="d-flex align-items-center gap-1 text-moss fw-semibold small">
             <span class="material-symbols-outlined fs-6">verified</span>
-            <span><?php esc_html_e('Official Society Portal', 'ichapore-swapnapuron'); ?></span>
+            <span><?php esc_html_e('Official Society Portal &bull; Section 80G Certified', 'ichapore-swapnapuron'); ?></span>
           </div>
         </div>
 
+        <!-- Amount Selection Cards -->
         <div class="my-4">
-          <label class="form-label text-uppercase fw-bold small text-secondary"><?php esc_html_e('Select Contribution Amount (INR)', 'ichapore-swapnapuron'); ?></label>
+          <label class="form-label text-uppercase fw-bold small text-secondary d-flex justify-content-between align-items-center mb-2">
+            <span><?php esc_html_e('Select Contribution Amount (INR)', 'ichapore-swapnapuron'); ?></span>
+            <span class="text-terracotta fw-bold small" id="home-sustainer-label"><?php esc_html_e('Monthly Sustainer', 'ichapore-swapnapuron'); ?></span>
+          </label>
           <div class="row g-2 g-sm-3 mb-3">
-            <div class="col-6 col-sm-3"><button type="button" class="w-100 amount-btn active fs-5" onclick="selectHomeAmount(500, this)">₹500</button></div>
-            <div class="col-6 col-sm-3"><button type="button" class="w-100 amount-btn fs-5" onclick="selectHomeAmount(1500, this)">₹1,500</button></div>
-            <div class="col-6 col-sm-3"><button type="button" class="w-100 amount-btn fs-5" onclick="selectHomeAmount(2500, this)">₹2,500</button></div>
-            <div class="col-6 col-sm-3"><button type="button" class="w-100 amount-btn fs-5" onclick="selectHomeAmount(5000, this)">₹5,000</button></div>
+            <div class="col-6 col-sm-3">
+              <button type="button" class="w-100 amount-btn donation-tier-btn active fs-5" data-amount="500" onclick="selectHomeAmount(500, this)">
+                <span class="d-block fw-extrabold amount-val">₹500</span>
+                <span class="d-block text-muted amount-desc" style="font-size:0.7rem; font-weight:normal;">Nutrition &amp; Meds</span>
+              </button>
+            </div>
+            <div class="col-6 col-sm-3">
+              <button type="button" class="w-100 amount-btn donation-tier-btn fs-5" data-amount="1500" onclick="selectHomeAmount(1500, this)">
+                <span class="d-block fw-extrabold amount-val">₹1,500</span>
+                <span class="d-block text-muted amount-desc" style="font-size:0.7rem; font-weight:normal;">School Bags &amp; Kits</span>
+              </button>
+            </div>
+            <div class="col-6 col-sm-3">
+              <button type="button" class="w-100 amount-btn donation-tier-btn fs-5" data-amount="2500" onclick="selectHomeAmount(2500, this)">
+                <span class="d-block fw-extrabold amount-val">₹2,500</span>
+                <span class="d-block text-muted amount-desc" style="font-size:0.7rem; font-weight:normal;">Health &amp; Dog Collars</span>
+              </button>
+            </div>
+            <div class="col-6 col-sm-3">
+              <button type="button" class="w-100 amount-btn donation-tier-btn fs-5" data-amount="5000" onclick="selectHomeAmount(5000, this)">
+                <span class="d-block fw-extrabold amount-val">₹5,000</span>
+                <span class="d-block text-muted amount-desc" style="font-size:0.7rem; font-weight:normal;">Thalassemia &amp; Camps</span>
+              </button>
+            </div>
           </div>
-          <div class="input-group">
-            <span class="input-group-text bg-light fw-bold text-dark">₹</span>
-            <input type="number" min="1" id="custom-amt-input" class="form-control" placeholder="<?php esc_attr_e('Or enter custom amount in INR', 'ichapore-swapnapuron'); ?>" oninput="handleHomeCustomAmount(this.value)">
+
+          <!-- Custom Amount Input -->
+          <div class="input-group input-group-lg">
+            <span class="input-group-text bg-light fw-bold text-dark border-end-0">₹ INR</span>
+            <input type="number" min="10" id="swapnapuron-custom-amount" class="form-control border-start-0 ps-0 fw-bold" placeholder="<?php esc_attr_e('Or enter custom amount in INR', 'ichapore-swapnapuron'); ?>" value="500" oninput="handleHomeCustomAmount(this.value)">
           </div>
         </div>
 
+        <!-- Live Impact Banner -->
         <div class="p-3 rounded-3 d-flex align-items-start gap-3 mb-4" style="background: var(--terracotta-50); border: 1px solid var(--terracotta-100);">
           <span class="material-symbols-outlined text-terracotta fs-4 mt-1">volunteer_activism</span>
           <div>
-            <span class="d-block text-uppercase fw-bold text-terracotta" style="font-size:0.72rem; letter-spacing:0.06em;"><?php esc_html_e('Your Impact', 'ichapore-swapnapuron'); ?></span>
+            <span class="d-block text-uppercase fw-bold text-terracotta" style="font-size:0.72rem; letter-spacing:0.06em;"><?php esc_html_e('Your Direct Impact', 'ichapore-swapnapuron'); ?></span>
             <p class="mb-0 small fw-medium" id="impact-description">
               <strong>₹500</strong> supports learning materials, notebooks, and mentorship for street children in our education program.
             </p>
           </div>
         </div>
 
-        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
-          <a href="<?php echo esc_url(home_url('/donate')); ?>?amount=500&freq=monthly" id="home-proceed-donate-btn" class="btn btn-terracotta rounded-pill px-5 py-3 w-100 w-sm-auto d-inline-flex align-items-center justify-content-center gap-2 shadow text-decoration-none text-white">
-            <span class="material-symbols-outlined fs-6">lock</span>
-            <span><?php esc_html_e('Proceed to Donate Now', 'ichapore-swapnapuron'); ?></span>
-          </a>
-          <span class="small text-muted fw-medium"><?php esc_html_e('100% direct community contribution &bull; 80G Certified', 'ichapore-swapnapuron'); ?></span>
+        <!-- Donor Information Fields -->
+        <div class="donor-details-section pt-3 border-top mb-4">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <span class="fw-bold small text-uppercase text-secondary" style="letter-spacing:0.06em;"><?php esc_html_e('Donor Information (For 80G Tax Receipt)', 'ichapore-swapnapuron'); ?></span>
+            <span class="badge rounded-pill bg-light text-muted border" style="font-size:0.68rem;"><?php esc_html_e('50% Tax Deduction', 'ichapore-swapnapuron'); ?></span>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label small fw-bold text-secondary mb-1"><?php esc_html_e('Full Name *', 'ichapore-swapnapuron'); ?></label>
+              <input type="text" id="donor_name" class="form-control" placeholder="<?php esc_attr_e('e.g. Sourav Mukherjee', 'ichapore-swapnapuron'); ?>" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold text-secondary mb-1"><?php esc_html_e('Email Address *', 'ichapore-swapnapuron'); ?></label>
+              <input type="email" id="donor_email" class="form-control" placeholder="<?php esc_attr_e('name@example.com', 'ichapore-swapnapuron'); ?>" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold text-secondary mb-1"><?php esc_html_e('WhatsApp / Mobile Number *', 'ichapore-swapnapuron'); ?></label>
+              <input type="tel" id="donor_phone" class="form-control" placeholder="<?php esc_attr_e('+91 98765 43210', 'ichapore-swapnapuron'); ?>" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold text-secondary mb-1"><?php esc_html_e('PAN Number (Optional, for Form 10BE)', 'ichapore-swapnapuron'); ?></label>
+              <input type="text" id="donor_pan" class="form-control text-uppercase" placeholder="<?php esc_attr_e('ABCDE1234F', 'ichapore-swapnapuron'); ?>" maxlength="10">
+            </div>
+            <div class="col-12">
+              <input type="hidden" id="donor_address" value="Bengal Supporter">
+              <div class="form-check mt-1">
+                <input class="form-check-input" type="checkbox" id="claim_80g" checked>
+                <label class="form-check-label small text-secondary" for="claim_80g">
+                  <?php esc_html_e('I require an Indian Income Tax Section 80G Tax Exemption Certificate.', 'ichapore-swapnapuron'); ?>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons & Subtext -->
+        <div class="d-flex flex-column gap-3">
+          <button type="button" id="btn-submit-donation" class="btn btn-terracotta rounded-pill px-5 py-3 w-100 fw-bold d-inline-flex align-items-center justify-content-center gap-2 shadow text-white" style="font-size:1.05rem;">
+            <span class="material-symbols-outlined fs-5">lock</span>
+            <span><?php esc_html_e('Donate Securely', 'ichapore-swapnapuron'); ?> ₹<span id="display-btn-amount">500</span> <span id="display-btn-freq">(Monthly)</span></span>
+            <span class="material-symbols-outlined fs-6">arrow_forward</span>
+          </button>
+          
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 small text-muted">
+            <span class="d-inline-flex align-items-center gap-1">
+              <span class="material-symbols-outlined text-moss fs-6">shield</span>
+              <span><?php esc_html_e('Supports UPI (GPay, PhonePe, Paytm), Cards & Netbanking', 'ichapore-swapnapuron'); ?></span>
+            </span>
+            <a href="<?php echo esc_url(home_url('/donate')); ?>" class="text-terracotta fw-semibold text-decoration-underline">
+              <?php esc_html_e('Prefer Direct UPI QR Code / Bank Wire? &rarr;', 'ichapore-swapnapuron'); ?>
+            </a>
+          </div>
+        </div>
+
+        <!-- Notice Alert for Simulation/Success -->
+        <div id="home-donate-notice" class="alert alert-success mt-4 mb-0 rounded-4 d-none" role="alert"></div>
+
+        <!-- Modal for 80G Receipt Display -->
+        <div id="swapnapuron-receipt-modal" class="swapnapuron-modal" style="display:none;">
+          <div class="swapnapuron-modal-content">
+            <span class="swapnapuron-modal-close" onclick="document.getElementById('swapnapuron-receipt-modal').style.display='none'">&times;</span>
+            <div id="swapnapuron-receipt-body"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -510,10 +596,19 @@ $addr   = swapnapuron_opt('swapnapuron_address', '41 Jatin Das Road, Ichapore Ma
     let homeAmount = 500;
     let homeFreq = 'monthly';
 
-    function updateHomeDonateLink() {
-      const btn = document.getElementById('home-proceed-donate-btn');
-      if (btn) {
-        btn.href = '<?php echo esc_url(home_url('/donate')); ?>?amount=' + encodeURIComponent(homeAmount) + '&freq=' + encodeURIComponent(homeFreq);
+    function updateHomeDonateUI() {
+      const displayAmt = document.getElementById('display-btn-amount');
+      if (displayAmt) displayAmt.textContent = Number(homeAmount).toLocaleString('en-IN');
+      
+      const displayFreq = document.getElementById('display-btn-freq');
+      if (displayFreq) displayFreq.textContent = homeFreq === 'monthly' ? '(Monthly)' : '(One-Time)';
+
+      const sustainerLabel = document.getElementById('home-sustainer-label');
+      if (sustainerLabel) sustainerLabel.textContent = homeFreq === 'monthly' ? '<?php echo esc_js(__('Monthly Sustainer', 'ichapore-swapnapuron')); ?>' : '<?php echo esc_js(__('One-Time Contribution', 'ichapore-swapnapuron')); ?>';
+
+      const customInput = document.getElementById('swapnapuron-custom-amount');
+      if (customInput && customInput.value != homeAmount) {
+        customInput.value = homeAmount;
       }
     }
 
@@ -521,30 +616,62 @@ $addr   = swapnapuron_opt('swapnapuron_address', '41 Jatin Das Road, Ichapore Ma
       homeAmount = amt;
       document.querySelectorAll('.amount-btn').forEach(btn => btn.classList.remove('active'));
       if (el) el.classList.add('active');
-      const input = document.getElementById('custom-amt-input');
-      if (input) input.value = '';
       const desc = document.getElementById('impact-description');
       if (desc && impactDescriptions[amt]) desc.innerHTML = impactDescriptions[amt];
-      updateHomeDonateLink();
+      updateHomeDonateUI();
     }
 
     function handleHomeCustomAmount(val) {
-      if (!val || val <= 0) return;
-      homeAmount = val;
-      document.querySelectorAll('.amount-btn').forEach(btn => btn.classList.remove('active'));
+      const amt = parseInt(val, 10);
+      if (!amt || amt <= 0) return;
+      homeAmount = amt;
+      document.querySelectorAll('.amount-btn').forEach(btn => {
+        if (btn.getAttribute('data-amount') == amt) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
       const desc = document.getElementById('impact-description');
       if (desc) {
-        desc.innerHTML = `<strong>₹${val}</strong> will directly support Ichapore Swapnapuron Society's education, healthcare, and community relief programs.`;
+        desc.innerHTML = `<strong>₹${amt.toLocaleString('en-IN')}</strong> will directly support Ichapore Swapnapuron Society's education, healthcare, and community relief programs.`;
       }
-      updateHomeDonateLink();
+      const displayAmt = document.getElementById('display-btn-amount');
+      if (displayAmt) displayAmt.textContent = Number(amt).toLocaleString('en-IN');
     }
 
     function setHomeFreq(type) {
       homeFreq = type;
       document.getElementById('freq-monthly').classList.toggle('active', type === 'monthly');
       document.getElementById('freq-once').classList.toggle('active', type === 'once');
-      updateHomeDonateLink();
+      updateHomeDonateUI();
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const submitBtn = document.getElementById('btn-submit-donation');
+      if (submitBtn) {
+        submitBtn.addEventListener('click', function(e) {
+          if (window.swapnapuronDonationData) {
+            // Handled by donation.js Razorpay logic
+            return;
+          }
+          e.preventDefault();
+          const name = document.getElementById('donor_name')?.value?.trim();
+          const email = document.getElementById('donor_email')?.value?.trim();
+          const phone = document.getElementById('donor_phone')?.value?.trim();
+          if (!name || !email || !phone) {
+            alert('Please provide your Full Name, Email, and Phone number.');
+            return;
+          }
+          const notice = document.getElementById('home-donate-notice');
+          if (notice) {
+            notice.innerHTML = `<div class="d-flex align-items-start gap-2"><span class="material-symbols-outlined text-success fs-4">check_circle</span><div><h5 class="h6 fw-bold mb-1">Thank you, ${name}!</h5><p class="small mb-1">Your pledge of <strong>₹${Number(homeAmount).toLocaleString('en-IN')} (${homeFreq})</strong> has been registered. Please complete payment using UPI ID: <strong>ichaporeswapnapuronsociety@pnb</strong> or Bank Transfer to PNB A/C: <strong>2101002100009707</strong>.</p><p class="small text-muted mb-0">Your 80G certificate will be dispatched to <strong>${email}</strong>.</p></div></div>`;
+            notice.classList.remove('d-none');
+            notice.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        });
+      }
+    });
 
     function handleHomeContactSubmit(e) {
       e.preventDefault();
