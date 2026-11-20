@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define theme constants
-define('SWAPNAPURON_VERSION', '1.0.1');
+define('SWAPNAPURON_VERSION', '1.0.2');
 define('SWAPNAPURON_DIR', get_template_directory());
 define('SWAPNAPURON_URI', get_template_directory_uri());
 
@@ -80,12 +80,14 @@ function swapnapuron_enqueue_scripts() {
         '5.3.3'
     );
 
+    $theme_ver = file_exists(SWAPNAPURON_DIR . '/assets/css/style.css') ? filemtime(SWAPNAPURON_DIR . '/assets/css/style.css') : SWAPNAPURON_VERSION;
+
     // Theme Main Stylesheet
     wp_enqueue_style(
         'swapnapuron-theme-style',
         SWAPNAPURON_URI . '/assets/css/style.css',
         array('bootstrap-5'),
-        SWAPNAPURON_VERSION
+        $theme_ver
     );
 
     // Theme Root style.css
