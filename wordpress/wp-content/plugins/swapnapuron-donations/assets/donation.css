@@ -3,10 +3,11 @@
  */
 
 .swapnapuron-donation-widget {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 20px;
-    padding: 30px;
+    padding: 24px;
+    color: #1e293b;
 }
 
 .donation-amount-grid {
@@ -16,12 +17,12 @@
 }
 
 .donation-tier-btn {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
     border-radius: 14px;
     padding: 14px 10px;
     text-align: center;
-    color: #fff;
+    color: #1e293b;
     cursor: pointer;
     transition: all 0.25s ease;
     display: flex;
@@ -31,31 +32,59 @@
 }
 
 .donation-tier-btn:hover {
-    background: rgba(230, 126, 34, 0.15);
-    border-color: rgba(230, 126, 34, 0.5);
+    background: #fff7ed;
+    border-color: #dc3e26;
+    color: #dc3e26;
     transform: translateY(-2px);
 }
 
 .donation-tier-btn.active {
-    background: #e67e22;
-    border-color: #d35400;
-    color: #111;
-    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.35);
+    background: #dc3e26 !important;
+    border-color: #b92b15 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(220, 62, 38, 0.35);
 }
 
 .donation-tier-btn .amount-val {
     font-size: 1.25rem;
     font-weight: 800;
+    color: inherit;
 }
 
 .donation-tier-btn .amount-desc {
     font-size: 0.72rem;
-    opacity: 0.8;
+    color: #64748b;
 }
 
 .donation-tier-btn.active .amount-desc {
-    color: #222;
+    color: #ffffff !important;
     font-weight: 600;
+}
+
+.swapnapuron-input {
+    background-color: #ffffff !important;
+    border: 1.5px solid #cbd5e1 !important;
+    color: #0f172a !important;
+    border-radius: 10px !important;
+    font-size: 0.95rem;
+    padding: 10px 14px;
+}
+
+.swapnapuron-input:focus {
+    border-color: #dc3e26 !important;
+    box-shadow: 0 0 0 3px rgba(220, 62, 38, 0.15) !important;
+}
+
+.btn-terracotta {
+    background-color: #dc3e26 !important;
+    border-color: #dc3e26 !important;
+    color: #ffffff !important;
+}
+
+.btn-terracotta:hover {
+    background-color: #b92b15 !important;
+    border-color: #b92b15 !important;
+    color: #ffffff !important;
 }
 
 /* Modal Popup */

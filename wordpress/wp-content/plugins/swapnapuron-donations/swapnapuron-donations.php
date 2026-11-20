@@ -314,53 +314,53 @@ function swapnapuron_render_donation_shortcode($atts) {
 
         <!-- Custom Amount Input -->
         <div class="input-group input-group-lg mb-4 donation-custom-amount-wrapper">
-            <span class="input-group-text bg-dark text-warning border-secondary fw-bold">₹ INR</span>
-            <input type="number" id="swapnapuron-custom-amount" class="form-control bg-dark text-white border-secondary" placeholder="Enter custom contribution (e.g. 1000)" value="500" min="50">
+            <span class="input-group-text bg-light text-terracotta border fw-bold">₹ INR</span>
+            <input type="number" id="swapnapuron-custom-amount" class="form-control swapnapuron-input" placeholder="Enter custom contribution (e.g. 1000)" value="500" min="50">
         </div>
 
         <!-- Donor Information Form -->
         <div class="donor-form-fields">
             <div class="row g-3">
                 <div class="col-md-6">
-                    <label class="form-label text-white-50 small fw-bold">FULL NAME *</label>
-                    <input type="text" id="donor_name" class="form-control bg-dark text-white border-secondary" placeholder="e.g. Sourav Mukherjee" required>
+                    <label class="form-label text-secondary small fw-bold">FULL NAME *</label>
+                    <input type="text" id="donor_name" class="form-control swapnapuron-input" placeholder="e.g. Sourav Mukherjee" required>
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label text-white-50 small fw-bold">EMAIL ADDRESS *</label>
-                    <input type="email" id="donor_email" class="form-control bg-dark text-white border-secondary" placeholder="name@example.com" required>
+                    <label class="form-label text-secondary small fw-bold">EMAIL ADDRESS *</label>
+                    <input type="email" id="donor_email" class="form-control swapnapuron-input" placeholder="name@example.com" required>
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label text-white-50 small fw-bold">MOBILE / WHATSAPP NUMBER *</label>
-                    <input type="tel" id="donor_phone" class="form-control bg-dark text-white border-secondary" placeholder="+91 98765 43210" required>
+                    <label class="form-label text-secondary small fw-bold">MOBILE / WHATSAPP NUMBER *</label>
+                    <input type="tel" id="donor_phone" class="form-control swapnapuron-input" placeholder="+91 98765 43210" required>
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label text-white-50 small fw-bold">PAN NUMBER (FOR 80G TAX EXEMPTION)</label>
-                    <input type="text" id="donor_pan" class="form-control bg-dark text-white border-secondary" placeholder="ABCDE1234F" style="text-transform: uppercase;" maxlength="10">
-                    <div class="form-text text-white-50 small">Mandatory by Income Tax Dept for Form 10BE tax benefit.</div>
+                    <label class="form-label text-secondary small fw-bold">PAN NUMBER (FOR 80G TAX EXEMPTION)</label>
+                    <input type="text" id="donor_pan" class="form-control swapnapuron-input" placeholder="ABCDE1234F" style="text-transform: uppercase;" maxlength="10">
+                    <div class="form-text text-muted small">Mandatory by Income Tax Dept for Form 10BE tax benefit.</div>
                 </div>
                 <div class="col-12">
-                    <label class="form-label text-white-50 small fw-bold">RESIDENTIAL / OFFICE ADDRESS (FOR 80G RECEIPT)</label>
-                    <input type="text" id="donor_address" class="form-control bg-dark text-white border-secondary" placeholder="House/Flat No, Street, City, State & PIN Code">
+                    <label class="form-label text-secondary small fw-bold">RESIDENTIAL / OFFICE ADDRESS (FOR 80G RECEIPT)</label>
+                    <input type="text" id="donor_address" class="form-control swapnapuron-input" placeholder="House/Flat No, Street, City, State & PIN Code">
                 </div>
             </div>
 
             <!-- Tax 80G Checkbox -->
             <div class="form-check mt-3">
                 <input class="form-check-input" type="checkbox" id="claim_80g" checked>
-                <label class="form-check-label text-white small" for="claim_80g">
+                <label class="form-check-label text-dark small fw-medium" for="claim_80g">
                     I require an Indian Income Tax Section 80G Tax Exemption Certificate.
                 </label>
             </div>
 
             <!-- Action Button -->
             <div class="mt-4">
-                <button type="button" id="btn-submit-donation" class="btn btn-warning btn-lg w-100 rounded-pill fw-bold text-dark shadow py-3">
+                <button type="button" id="btn-submit-donation" class="btn btn-terracotta btn-lg w-100 rounded-pill fw-bold text-white shadow py-3">
                     <i class="bi bi-shield-check me-2"></i> Donate Securely with Razorpay (₹<span id="display-btn-amount">500</span>)
                 </button>
             </div>
             <div class="text-center mt-2">
-                <span class="text-white-50 small">
-                    <i class="bi bi-lock-fill text-warning me-1"></i> Supports UPI (GPay, PhonePe, Paytm), Debit/Credit Cards & Netbanking
+                <span class="text-muted small">
+                    <i class="bi bi-lock-fill text-terracotta me-1"></i> Supports UPI (GPay, PhonePe, Paytm), Debit/Credit Cards & Netbanking
                 </span>
             </div>
         </div>

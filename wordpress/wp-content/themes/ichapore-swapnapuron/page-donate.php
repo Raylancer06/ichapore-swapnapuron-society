@@ -76,12 +76,7 @@ $upi_id    = swapnapuron_opt('swapnapuron_upi_id', 'ichaporeswapnapuronsociety@p
         <div class="col-lg-7">
           <div class="donation-card p-4 p-md-5">
 
-            <!-- Check if custom plugin shortcode or native form -->
-            <?php if (shortcode_exists('swapnapuron_donation_form')): ?>
-              <?php echo do_shortcode('[swapnapuron_donation_form]'); ?>
-            <?php else: ?>
-
-              <!-- Native Form with Dynamic Coordinates -->
+            <!-- Native Form with Dynamic Coordinates -->
               <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pb-4 mb-4 border-bottom border-sand-300">
                 <div class="d-inline-flex p-1 bg-light rounded-pill border border-sand-300">
                   <button type="button" class="btn btn-sm rounded-pill px-4 py-2 fw-bold active text-uppercase" id="freq-once" onclick="setFreq('once')" style="font-size:0.75rem; letter-spacing:0.04em;"><?php esc_html_e('One-Time Gift', 'ichapore-swapnapuron'); ?></button>
@@ -221,8 +216,6 @@ $upi_id    = swapnapuron_opt('swapnapuron_upi_id', 'ichaporeswapnapuronsociety@p
                   </div>
                 </div>
               </form>
-
-            <?php endif; ?>
 
           </div>
         </div>
@@ -497,6 +490,32 @@ $upi_id    = swapnapuron_opt('swapnapuron_upi_id', 'ichaporeswapnapuronsociety@p
         alert('Copied: ' + text);
       });
     }
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlAmt = parseInt(urlParams.get('amount'), 10);
+      const urlFreq = urlParams.get('freq');
+
+      if (urlFreq === 'monthly' || urlFreq === 'once') {
+        setFreq(urlFreq);
+      }
+
+      if (urlAmt) {
+        let matched = false;
+        document.querySelectorAll('.tier-tile').forEach(tile => {
+          if (tile.getAttribute('onclick') && tile.getAttribute('onclick').includes(urlAmt.toString())) {
+            selectTier(urlAmt, tile);
+            matched = true;
+          }
+        });
+        if (!matched) {
+          const input = document.getElementById('customInput');
+          if (input) {
+            input.value = urlAmt;
+            handleCustomTier(urlAmt);
+          }
+        }
+      }
+    });
   </script>
 
 <?php
