@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define theme constants
-define('SWAPNAPURON_VERSION', '1.0.0');
+define('SWAPNAPURON_VERSION', '1.0.1');
 define('SWAPNAPURON_DIR', get_template_directory());
 define('SWAPNAPURON_URI', get_template_directory_uri());
 
@@ -24,14 +24,10 @@ require_once SWAPNAPURON_DIR . '/inc/template-tags.php';
  * Theme Setup
  */
 function swapnapuron_theme_setup() {
-    // Add default title tag support
     add_theme_support('title-tag');
-
-    // Add support for Featured Images
     add_theme_support('post-thumbnails');
     set_post_thumbnail_size(1200, 700, true);
 
-    // Add custom logo support
     add_theme_support('custom-logo', array(
         'height'      => 80,
         'width'       => 80,
@@ -39,13 +35,11 @@ function swapnapuron_theme_setup() {
         'flex-width'  => true,
     ));
 
-    // Register Navigation Menus
     register_nav_menus(array(
         'primary' => __('Primary Navigation Menu', 'ichapore-swapnapuron'),
         'footer'  => __('Footer Quick Links', 'ichapore-swapnapuron'),
     ));
 
-    // HTML5 markup support
     add_theme_support('html5', array(
         'search-form',
         'comment-form',
@@ -65,7 +59,7 @@ function swapnapuron_enqueue_scripts() {
     // Google Montserrat Font
     wp_enqueue_style(
         'swapnapuron-fonts',
-        'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap',
+        'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap',
         array(),
         null
     );
@@ -73,7 +67,7 @@ function swapnapuron_enqueue_scripts() {
     // Google Material Symbols Outlined
     wp_enqueue_style(
         'swapnapuron-material-icons',
-        'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200',
+        'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap',
         array(),
         null
     );
@@ -94,6 +88,14 @@ function swapnapuron_enqueue_scripts() {
         SWAPNAPURON_VERSION
     );
 
+    // Theme Root style.css
+    wp_enqueue_style(
+        'swapnapuron-root-style',
+        get_stylesheet_uri(),
+        array('swapnapuron-theme-style'),
+        SWAPNAPURON_VERSION
+    );
+
     // Bootstrap 5.3.3 JS Bundle
     wp_enqueue_script(
         'bootstrap-5-bundle',
@@ -110,7 +112,7 @@ add_action('wp_enqueue_scripts', 'swapnapuron_enqueue_scripts');
  */
 class Swapnapuron_BS5_Nav_Walker extends Walker_Nav_Menu {
     function start_lvl(&$output, $depth = 0, $args = null) {
-        $output .= '<ul class="dropdown-menu dropdown-menu-editorial shadow-sm border-0 p-2">';
+        $output .= '<ul class="dropdown-menu dropdown-menu-dark shadow-lg border-0 p-2">';
     }
 
     function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {

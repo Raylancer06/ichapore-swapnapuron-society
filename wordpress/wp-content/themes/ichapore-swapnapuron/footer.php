@@ -8,31 +8,33 @@
 if (!defined('ABSPATH')) {
     exit;
 }
+
+$site_name = swapnapuron_site_name();
 ?>
 
   <!-- FOOTER -->
-  <footer class="bg-charcoal-deep pt-5 pb-4">
+  <footer class="bg-charcoal-deep pt-5 pb-4" style="background-color: var(--charcoal-950);">
     <div class="container">
       <div class="row g-4 pb-5 border-bottom border-secondary border-opacity-25">
         <div class="col-lg-5">
           <div class="d-flex align-items-center gap-3 mb-3">
-            <div class="p-1 rounded-circle bg-white">
+            <div class="p-1 rounded-circle bg-white shadow-sm flex-shrink-0" style="border: 1px solid rgba(255,255,255,0.2);">
               <img alt="Ichapore Swapnapuron Society Emblem" class="rounded-circle object-fit-contain" width="48" height="48" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDx6yWAmHDCrVbZI5uzhW1gAPtZh4t95nomk0bfPffp68fRLPrwJ-YTGQZfiVZ38oVa8pqcdN5svrB-pK4U945N5UIqEiCerEf8eGfKIAGNseQ0Klr3dOKqbkhCgxb1On4D7JMgzDHIj5qkgRvtFQTDck-kwvDnePjPtafPvWBhOAKec7Xa_-g84NucEPs7KjAFqcjiPlGgAhgALek6lgEnVO3l0bsOUtJB5vt9PtIBLdY7z-gCKt55A">
             </div>
             <div>
-              <div class="fw-bold text-white"><?php bloginfo('name'); ?></div>
-              <div class="small text-white-50"><?php esc_html_e('Bringing Smiles Through Education', 'ichapore-swapnapuron'); ?> &bull; <?php esc_html_e('Estd.', 'ichapore-swapnapuron'); ?> <?php echo esc_html(swapnapuron_opt('swapnapuron_estd', '2009')); ?></div>
+              <div class="fw-bold text-white fs-5"><?php echo esc_html($site_name); ?></div>
+              <div class="small text-warning"><?php esc_html_e('Bringing Smiles Through Education', 'ichapore-swapnapuron'); ?> &bull; <?php esc_html_e('Estd.', 'ichapore-swapnapuron'); ?> <?php echo esc_html(swapnapuron_opt('swapnapuron_estd', '2009')); ?></div>
             </div>
           </div>
-          <p class="small text-white-50 mb-3" style="max-width: 380px;">
+          <p class="small text-white-50 mb-3" style="max-width: 420px; line-height: 1.6;">
             <?php esc_html_e('Dedicated to grassroots social transformation through street children education, women\'s healthcare, thalassemia prevention, hunger relief, and animal welfare across North 24 Parganas.', 'ichapore-swapnapuron'); ?>
           </p>
 
-          <div class="mb-3">
+          <div class="mb-4">
             <?php swapnapuron_social_pills(); ?>
           </div>
 
-          <div class="small text-white-50" style="font-size:0.75rem;">
+          <div class="small text-white-50 p-2.5 rounded-3 d-inline-block" style="font-size:0.75rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
             <div><strong><?php esc_html_e('Society Reg:', 'ichapore-swapnapuron'); ?></strong> <?php echo esc_html(swapnapuron_opt('swapnapuron_reg_no', 'S0011507 of 2019-2020')); ?></div>
             <div><strong><?php esc_html_e('PAN:', 'ichapore-swapnapuron'); ?></strong> <?php echo esc_html(swapnapuron_opt('swapnapuron_pan', 'AAAAI9694K')); ?> &bull; <strong><?php esc_html_e('80G URN:', 'ichapore-swapnapuron'); ?></strong> <?php echo esc_html(swapnapuron_opt('swapnapuron_80g_urn', 'AAAAI9694KF20251')); ?></div>
           </div>
@@ -59,7 +61,7 @@ if (!defined('ABSPATH')) {
           
           <?php $phone1 = swapnapuron_opt('swapnapuron_phone_1', '+91 83360 66390'); ?>
           <?php $phone2 = swapnapuron_opt('swapnapuron_phone_2', '+91 89183 97307'); ?>
-          <p class="small mb-1">
+          <p class="small mb-2">
             <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', $phone1)); ?>" class="text-light text-decoration-none"><?php echo esc_html($phone1); ?></a>
             <?php if ($phone2): ?>
               / <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', $phone2)); ?>" class="text-light text-decoration-none"><?php echo esc_html($phone2); ?></a>
@@ -74,7 +76,7 @@ if (!defined('ABSPATH')) {
       </div>
 
       <div class="pt-4 d-flex flex-column flex-sm-row align-items-center justify-content-between gap-2 small text-white-50 text-center text-sm-start">
-        <span>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <?php esc_html_e('All rights reserved.', 'ichapore-swapnapuron'); ?></span>
+        <span>&copy; <?php echo date('Y'); ?> <?php echo esc_html($site_name); ?>. <?php esc_html_e('All rights reserved.', 'ichapore-swapnapuron'); ?></span>
         <a href="#top" class="text-light text-decoration-none fw-semibold"><?php esc_html_e('Back to Top ↑', 'ichapore-swapnapuron'); ?></a>
       </div>
     </div>
