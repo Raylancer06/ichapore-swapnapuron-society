@@ -108,15 +108,15 @@ $site_desc = swapnapuron_site_desc();
                 <?php esc_html_e('Our Projects', 'ichapore-swapnapuron'); ?>
               </a>
               <ul class="dropdown-menu dropdown-menu-editorial shadow-sm border-0 p-2">
-                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/project/swasthya-chakra/')); ?>">Swasthya Chakra (Healthcare)</a></li>
-                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/project/janmataru/')); ?>">Janmataru (Green Newborns)</a></li>
-                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/project/ayushman-bhava/')); ?>">Ayushman Bhava (Street Animals)</a></li>
+                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/swasthya-chakra/')); ?>">Swasthya Chakra (Healthcare)</a></li>
+                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/janmataru/')); ?>">Janmataru (Green Newborns)</a></li>
+                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/ayushman-bhava/')); ?>">Ayushman Bhava (Street Animals)</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/project/happy/')); ?>">Smile with Santa (Winter Joy)</a></li>
-                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/project/udaan/')); ?>">Project Udaan (Thalassemia)</a></li>
-                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/project/anandadhara/')); ?>">Anandadhara (Food Rescue)</a></li>
-                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/project/vidharthi/')); ?>">Vidharthi (Mission Education)</a></li>
-                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/project/ashiana/')); ?>">Ashiana (Bird Habitat)</a></li>
+                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/happy/')); ?>">Smile with Santa (Winter Joy)</a></li>
+                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/udaan/')); ?>">Project Udaan (Thalassemia)</a></li>
+                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/anandadhara/')); ?>">Anandadhara (Food Rescue)</a></li>
+                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/vidharthi/')); ?>">Vidharthi (Mission Education)</a></li>
+                <li><a class="dropdown-item dropdown-item-editorial" href="<?php echo esc_url(home_url('/ashiana/')); ?>">Ashiana (Bird Habitat)</a></li>
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link nav-link-editorial px-3 px-lg-2 py-2 rounded-3" href="<?php echo esc_url(home_url('/volunteer')); ?>"><?php esc_html_e('Get Involved', 'ichapore-swapnapuron'); ?></a></li>

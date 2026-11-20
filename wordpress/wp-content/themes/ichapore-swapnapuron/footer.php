@@ -47,19 +47,19 @@ $addr   = swapnapuron_opt('swapnapuron_address', '41 Jatin Das Road, Ichapore Ma
           <h4 class="h6 fw-bold text-uppercase text-white mb-3" style="letter-spacing:0.08em;"><?php esc_html_e('Quick Links', 'ichapore-swapnapuron'); ?></h4>
           <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
             <li><a href="<?php echo esc_url(home_url('/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Home', 'ichapore-swapnapuron'); ?></a></li>
-            <li><a href="<?php echo esc_url(home_url('/who-we-are')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Who We Are', 'ichapore-swapnapuron'); ?></a></li>
-            <li><a href="<?php echo esc_url(home_url('/mission-vision')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Mission & Vision', 'ichapore-swapnapuron'); ?></a></li>
-            <li><a href="<?php echo esc_url(home_url('/our-team')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Our Team', 'ichapore-swapnapuron'); ?></a></li>
-            <li><a href="<?php echo esc_url(home_url('/why-trust-us')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Why Trust Us', 'ichapore-swapnapuron'); ?></a></li>
-            <li><a href="<?php echo esc_url(home_url('/project/swasthya-chakra/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Swasthya Chakra', 'ichapore-swapnapuron'); ?></a></li>
-            <li><a href="<?php echo esc_url(home_url('/project/janmataru/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Janmataru', 'ichapore-swapnapuron'); ?></a></li>
-            <li><a href="<?php echo esc_url(home_url('/project/ayushman-bhava/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Ayushman Bhava', 'ichapore-swapnapuron'); ?></a></li>
-            <li><a href="<?php echo esc_url(home_url('/project/happy/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Smile with Santa', 'ichapore-swapnapuron'); ?></a></li>
-            <li><a href="<?php echo esc_url(home_url('/project/udaan/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Project Udaan', 'ichapore-swapnapuron'); ?></a></li>
-            <li><a href="<?php echo esc_url(home_url('/project/anandadhara/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Anandadhara', 'ichapore-swapnapuron'); ?></a></li>
-            <li><a href="<?php echo esc_url(home_url('/project/vidharthi/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Vidharthi', 'ichapore-swapnapuron'); ?></a></li>
-            <li><a href="<?php echo esc_url(home_url('/project/ashiana/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Ashiana', 'ichapore-swapnapuron'); ?></a></li>
-            <li><a href="<?php echo esc_url(home_url('/privacy-policy')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Privacy Policy', 'ichapore-swapnapuron'); ?></a></li>
+            <li><a href="<?php echo esc_url(home_url('/who-we-are/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Who We Are', 'ichapore-swapnapuron'); ?></a></li>
+            <li><a href="<?php echo esc_url(home_url('/mission-vision/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Mission & Vision', 'ichapore-swapnapuron'); ?></a></li>
+            <li><a href="<?php echo esc_url(home_url('/our-team/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Our Team', 'ichapore-swapnapuron'); ?></a></li>
+            <li><a href="<?php echo esc_url(home_url('/why-trust-us/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Why Trust Us', 'ichapore-swapnapuron'); ?></a></li>
+            <li><a href="<?php echo esc_url(home_url('/swasthya-chakra/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Swasthya Chakra', 'ichapore-swapnapuron'); ?></a></li>
+            <li><a href="<?php echo esc_url(home_url('/janmataru/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Janmataru', 'ichapore-swapnapuron'); ?></a></li>
+            <li><a href="<?php echo esc_url(home_url('/ayushman-bhava/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Ayushman Bhava', 'ichapore-swapnapuron'); ?></a></li>
+            <li><a href="<?php echo esc_url(home_url('/happy/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Smile with Santa', 'ichapore-swapnapuron'); ?></a></li>
+            <li><a href="<?php echo esc_url(home_url('/udaan/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Project Udaan', 'ichapore-swapnapuron'); ?></a></li>
+            <li><a href="<?php echo esc_url(home_url('/anandadhara/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Anandadhara', 'ichapore-swapnapuron'); ?></a></li>
+            <li><a href="<?php echo esc_url(home_url('/vidharthi/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Vidharthi', 'ichapore-swapnapuron'); ?></a></li>
+            <li><a href="<?php echo esc_url(home_url('/ashiana/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Ashiana', 'ichapore-swapnapuron'); ?></a></li>
+            <li><a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>" class="text-white-50 text-decoration-none"><?php esc_html_e('Privacy Policy', 'ichapore-swapnapuron'); ?></a></li>
           </ul>
         </div>
 

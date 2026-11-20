@@ -147,3 +147,71 @@ class Swapnapuron_BS5_Nav_Walker extends Walker_Nav_Menu {
         $output .= "</ul>\n";
     }
 }
+
+/**
+ * Auto-provision all 16 website pages on theme switch or initial load
+ */
+function swapnapuron_auto_provision_pages() {
+    $pages = array(
+        'who-we-are'      => array('title' => 'Who We Are', 'template' => 'page-who-we-are.php'),
+        'mission-vision'  => array('title' => 'Mission & Vision', 'template' => 'page-mission-vision.php'),
+        'our-team'        => array('title' => 'Our Team', 'template' => 'page-our-team.php'),
+        'why-trust-us'    => array('title' => 'Why Trust Us', 'template' => 'page-why-trust-us.php'),
+        'swasthya-chakra' => array('title' => 'Swasthya Chakra', 'template' => 'page-swasthya-chakra.php'),
+        'janmataru'       => array('title' => 'Janmataru', 'template' => 'page-janmataru.php'),
+        'ayushman-bhava'  => array('title' => 'Ayushman Bhava', 'template' => 'page-ayushman-bhava.php'),
+        'happy'           => array('title' => 'Smile with Santa', 'template' => 'page-happy.php'),
+        'udaan'           => array('title' => 'Project Udaan', 'template' => 'page-udaan.php'),
+        'anandadhara'     => array('title' => 'Anandadhara', 'template' => 'page-anandadhara.php'),
+        'vidharthi'       => array('title' => 'Vidharthi', 'template' => 'page-vidharthi.php'),
+        'ashiana'         => array('title' => 'Project Ashiana', 'template' => 'page-ashiana.php'),
+        'volunteer'       => array('title' => 'Volunteer Registration', 'template' => 'page-volunteer.php'),
+        'contact'         => array('title' => 'Contact Us', 'template' => 'page-contact.php'),
+        'donate'          => array('title' => 'Donate Now', 'template' => 'page-donate.php'),
+        'privacy-policy'  => array('title' => 'Privacy Policy', 'template' => 'page-privacy-policy.php'),
+    );
+
+    foreach ($pages as $slug => $data) {
+        $page = get_page_by_path($slug);
+        if (!$page) {
+            $page_id = wp_insert_post(array(
+                'post_title'     => $data['title'],
+                'post_name'      => $slug,
+                'post_status'    => 'publish',
+                'post_type'      => 'page',
+                'comment_status' => 'closed',
+                'ping_status'    => 'closed',
+            ));
+            if ($page_id && !is_wp_error($page_id)) {
+                update_post_meta($page_id, '_wp_page_template', $data['template']);
+            }
+        } else {
+            $cur = get_post_meta($page->ID, '_wp_page_template', true);
+            if ($cur !== $data['template']) {
+                update_post_meta($page->ID, '_wp_page_template', $data['template']);
+            }
+        }
+    }
+}
+add_action('after_switch_theme', 'swapnapuron_auto_provision_pages');
+add_action('init', 'swapnapuron_auto_provision_pages');
+
+/**
+ * Handle URL redirects from /project/slug/ or /projects/slug/ to /slug/
+ */
+function swapnapuron_project_rewrite_redirect() {
+    if (is_admin() || wp_doing_ajax()) return;
+
+    $req_uri = trim($_SERVER['REQUEST_URI'] ?? '', '/');
+    // Strip query string if any
+    $req_path = parse_url($req_uri, PHP_URL_PATH);
+    if (!$req_path) return;
+
+    if (preg_match('#^projects?/(happy|udaan|anandadhara|vidharthi|ashiana|swasthya-chakra|janmataru|ayushman-bhava)/?$#i', $req_path, $matches)) {
+        $slug = strtolower($matches[1]);
+        wp_safe_redirect(home_url('/' . $slug . '/'), 301);
+        exit;
+    }
+}
+add_action('template_redirect', 'swapnapuron_project_rewrite_redirect');
+
