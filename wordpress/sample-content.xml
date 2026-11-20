@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:wp="http://wordpress.org/export/1.2/"
+>
+<channel>
+	<title>Ichapore Swapnapuron Society</title>
+	<link>https://www.ichaporeswapnapuronsociety.org</link>
+	<description>Serving Humanity with Compassion &amp; Purpose</description>
+	<pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+	<language>en-US</language>
+	<wp:wxr_version>1.2</wp:wxr_version>
+
+	<!-- Project 1: Ayushman Bhava -->
+	<item>
+		<title>Ayushman Bhava</title>
+		<link>https://www.ichaporeswapnapuronsociety.org/project/ayushman-bhava/</link>
+		<pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://www.ichaporeswapnapuronsociety.org/?post_type=project&#038;p=101</guid>
+		<description></description>
+		<content:encoded><![CDATA[Ayushman Bhava is our grassroots animal welfare campaign protecting street dogs from fatal night road accidents by fitting durable, high-visibility reflective collars. Every collar fitted is a shield against speeding vehicles in dark suburban lanes and highways. Beyond road safety, our volunteers treat minor wounds, feed hungry strays, and nurture an environment of compassion between neighbourhood residents and local animals.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Reflective collar initiative and street animal care saving strays from nocturnal highway accidents.]]></excerpt:encoded>
+		<wp:post_id>101</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-20 12:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[ayushman-bhava]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_badge]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Animal Safety & Welfare Initiative]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_tagline]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Reflective Collar Initiative for Street Dogs]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_glow_color]]></wp:meta_key>
+			<wp:meta_value><![CDATA[#e67e22]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_quote]]></wp:meta_key>
+			<wp:meta_value><![CDATA[The greatness of a community is judged by the way its animals are treated. Every life matters.]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_quote_sub]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Ayushman Bhava Core Mission]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- Project 2: Swasthya Chakra -->
+	<item>
+		<title>Swasthya Chakra</title>
+		<link>https://www.ichaporeswapnapuronsociety.org/project/swasthya-chakra/</link>
+		<pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://www.ichaporeswapnapuronsociety.org/?post_type=project&#038;p=102</guid>
+		<description></description>
+		<content:encoded><![CDATA[Swasthya Chakra delivers free, quality healthcare, medical consultations, and essential medicines to underserved populations across Ichapore and surrounding rural areas. We run periodic comprehensive health camps featuring general medicine, blood pressure and blood sugar checks, eye check-ups with free spectacles, ECG screenings, and doctor consultations.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Community health camps providing free doctor consultations, screenings, and vital medicines.]]></excerpt:encoded>
+		<wp:post_id>102</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-20 12:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[swasthya-chakra]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_badge]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Healthcare & Medical Outreach]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_tagline]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Comprehensive Community Healthcare Camps]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_glow_color]]></wp:meta_key>
+			<wp:meta_value><![CDATA[#dc3e26]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- Project 3: Janmataru -->
+	<item>
+		<title>Janmataru</title>
+		<link>https://www.ichaporeswapnapuronsociety.org/project/janmataru/</link>
+		<pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://www.ichaporeswapnapuronsociety.org/?post_type=project&#038;p=103</guid>
+		<description></description>
+		<content:encoded><![CDATA[Janmataru is an innovative green initiative that links tree planting with life's sacred moments: birthdays, anniversaries, and in remembrance of departed loved ones. Rather than treating afforestation as a generic task, we plant fruit-bearing and oxygen-rich saplings dedicated to individual milestones, turning climate action into a deeply personal, cherished relationship.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Transforming birthdays, anniversaries, and remembrances into living green legacies across Bengal.]]></excerpt:encoded>
+		<wp:post_id>103</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-20 12:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[janmataru]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_badge]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Environmental Afforestation Initiative]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_tagline]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Plant a Tree for Every Birthday & Life Milestone]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_glow_color]]></wp:meta_key>
+			<wp:meta_value><![CDATA[#27ae60]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- Project 4: Happy (Smile with Santa) -->
+	<item>
+		<title>Happy (Smile with Santa)</title>
+		<link>https://www.ichaporeswapnapuronsociety.org/project/happy/</link>
+		<pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://www.ichaporeswapnapuronsociety.org/?post_type=project&#038;p=104</guid>
+		<description></description>
+		<content:encoded><![CDATA[Every winter, Project Happy brings unconditional joy, warmth, and festive celebration to children living in underserved railway platforms, remote riverine hamlets, and urban slums. Our volunteers dress as Santa Claus carrying sacks full of gifts, warm woollen garments, storybooks, drawing kits, and sweets.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Spreading winter joy, warm woollens, and festive gift hampers to underprivileged children.]]></excerpt:encoded>
+		<wp:post_id>104</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-20 12:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[happy]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_badge]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Childhood Joy & Winter Relief]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_tagline]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Smile with Santa & Winter Gift Distribution]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_glow_color]]></wp:meta_key>
+			<wp:meta_value><![CDATA[#e74c3c]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- Project 5: Udaan -->
+	<item>
+		<title>Udaan</title>
+		<link>https://www.ichaporeswapnapuronsociety.org/project/udaan/</link>
+		<pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://www.ichaporeswapnapuronsociety.org/?post_type=project&#038;p=105</guid>
+		<description></description>
+		<content:encoded><![CDATA[Project Udaan is our dedicated mission to eradicate Thalassemia through early school screening, carrier detection, pre-marital counselling, and blood donation facilitation for children in need. Thalassemia is 100% preventable if both partners know their carrier status before marriage.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Eradicating Thalassemia through free HPLC carrier blood testing, counselling, and blood drives.]]></excerpt:encoded>
+		<wp:post_id>105</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-20 12:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[udaan]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_badge]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Thalassemia Awareness & Care]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_tagline]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Thalassemia Screening & Carrier Detection Drives]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_glow_color]]></wp:meta_key>
+			<wp:meta_value><![CDATA[#c0392b]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- Project 6: Anandadhara -->
+	<item>
+		<title>Anandadhara</title>
+		<link>https://www.ichaporeswapnapuronsociety.org/project/anandadhara/</link>
+		<pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://www.ichaporeswapnapuronsociety.org/?post_type=project&#038;p=106</guid>
+		<description></description>
+		<content:encoded><![CDATA[Project Anandadhara is dedicated to the fundamental human right to nutritious sustenance. Hunger robs children of the energy to learn and forces vulnerable elders to scavenge. Through community kitchens, food drives, and emergency ration relief, Anandadhara ensures no hungry stomach is turned away.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Nutritious community kitchens, hot meals, and grocery ration kits for hungry families.]]></excerpt:encoded>
+		<wp:post_id>106</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-20 12:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[anandadhara]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_badge]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Hunger Alleviation & Nutrition]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_tagline]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Community Kitchen & Nutrition Support Drives]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_glow_color]]></wp:meta_key>
+			<wp:meta_value><![CDATA[#f39c12]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- Project 7: Vidharthi -->
+	<item>
+		<title>Vidharthi</title>
+		<link>https://www.ichaporeswapnapuronsociety.org/project/vidharthi/</link>
+		<pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://www.ichaporeswapnapuronsociety.org/?post_type=project&#038;p=107</guid>
+		<description></description>
+		<content:encoded><![CDATA[Education is the single most powerful tool to break generational poverty. Project Vidharthi provides free books, stationery kits, school uniforms, and dedicated remedial tutoring to underprivileged students across Bengal. We mentor children through their board exams and encourage them to pursue higher degrees.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Free school supplies, books, coaching, and educational mentorship for underprivileged students.]]></excerpt:encoded>
+		<wp:post_id>107</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-20 12:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[vidharthi]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_badge]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Education for Underprivileged Children]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_tagline]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Educational Sponsorship & Remedial Tutoring Academy]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_glow_color]]></wp:meta_key>
+			<wp:meta_value><![CDATA[#2980b9]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- Project 8: Ashiana -->
+	<item>
+		<title>Ashiana</title>
+		<link>https://www.ichaporeswapnapuronsociety.org/project/ashiana/</link>
+		<pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://www.ichaporeswapnapuronsociety.org/?post_type=project&#038;p=108</guid>
+		<description></description>
+		<content:encoded><![CDATA[Project Ashiana is our ecological bird conservation drive protecting local and migratory avian biodiversity. With rapid urbanisation cutting down ancient canopy trees, birds lose safe nesting cavities. Ashiana builds and hangs handcrafted, eco-friendly earthen nesting handis and water feeders across town.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Hanging clay nesting handis and freshwater bird feeders to safeguard urban avian biodiversity.]]></excerpt:encoded>
+		<wp:post_id>108</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-20 12:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[ashiana]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_badge]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Bird Protection & Ecological Habitat]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_tagline]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Eco-Friendly Nesting Handis & Bird Feeders]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_project_glow_color]]></wp:meta_key>
+			<wp:meta_value><![CDATA[#16a085]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+</channel>
+</rss>
