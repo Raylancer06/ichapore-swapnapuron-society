@@ -2,6 +2,8 @@
 /**
  * The front page template for Ichapore Swapnapuron Society
  *
+ * 1-to-1 exact replica of index.html
+ *
  * @package Ichapore_Swapnapuron
  */
 
@@ -10,319 +12,126 @@ if (!defined('ABSPATH')) {
 }
 
 get_header();
+
+$phone1 = swapnapuron_opt('swapnapuron_phone_1', '+91 83360 66390');
+$phone2 = swapnapuron_opt('swapnapuron_phone_2', '+91 89183 97307');
+$email  = swapnapuron_opt('swapnapuron_email', 'ichaporeswapnapuronsociety@gmail.com');
+$addr   = swapnapuron_opt('swapnapuron_address', '41 Jatin Das Road, Ichapore Majher Para, North 24 Parganas, West Bengal');
 ?>
 
-  <!-- HERO SECTION -->
-  <section class="hero-section position-relative overflow-hidden text-white d-flex align-items-center" style="min-height: 85vh; background-color: var(--charcoal-950);">
-    <!-- Background Video -->
-    <video autoplay muted loop playsinline class="hero-video-bg position-absolute w-100 h-100 object-fit-cover" style="inset:0; z-index:0; opacity: 0.35;">
-      <source src="https://video.wixstatic.com/video/93f81a_b378051771194380a0684f85e49c7f1a/1080p/mp4/file.mp4" type="video/mp4">
+  <!-- HERO SECTION WITH LIVE WEBSITE VIDEO -->
+  <section class="hero-section py-5">
+    <video class="hero-video-bg" autoplay muted loop playsinline poster="<?php echo esc_url(SWAPNAPURON_URI . '/assets/images/hero-school.jpg'); ?>">
+      <source src="https://video.wixstatic.com/video/93f81a_b2f4ab6cc6154cee8f23b067e9e188dd/1080p/mp4/file.mp4" type="video/mp4">
     </video>
+    <div class="hero-scrim"></div>
 
-    <!-- Scrim -->
-    <div class="position-absolute w-100 h-100" style="inset:0; z-index:1; background: linear-gradient(105deg, rgba(11, 16, 18, 0.94) 0%, rgba(18, 24, 27, 0.82) 55%, rgba(18, 24, 27, 0.6) 100%);"></div>
-
-    <div class="container position-relative py-5 my-lg-4" style="z-index: 2;">
+    <div class="container hero-content py-4 py-lg-5">
       <div class="row align-items-center g-5">
-        <!-- Hero Text (Left) -->
         <div class="col-lg-7">
-          <div class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18);">
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-4" style="background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22); backdrop-filter: blur(6px);">
             <span class="pulse-dot"></span>
-            <span class="text-uppercase fw-bold text-white small" style="letter-spacing:0.08em;"><?php esc_html_e('Non-Profit Society &bull; Reg: S0011507', 'ichapore-swapnapuron'); ?></span>
+            <span class="text-uppercase fw-bold" style="font-size:0.7rem; letter-spacing:0.1em; color:#fff;"><?php esc_html_e('Ichapore, North 24 Parganas &bull; West Bengal', 'ichapore-swapnapuron'); ?></span>
           </div>
 
-          <h1 class="display-3 fw-extrabold text-uppercase tracking-tight text-white mb-3 lh-sm" style="font-weight: 900; letter-spacing: -0.02em;">
-            <?php esc_html_e('Bringing Smiles Through Action & Compassion', 'ichapore-swapnapuron'); ?>
+          <h1 class="hero-title text-uppercase mb-4 text-white">
+            Bringing <span class="hero-accent">Smiles</span> Through Education
           </h1>
 
-          <p class="lead text-light opacity-90 mb-4" style="max-width: 620px; font-weight: 400; font-size: 1.15rem; line-height: 1.7;">
-            <?php esc_html_e('From free primary schooling and night hunger rescue to thalassemia carrier testing and stray animal safety, Ichapore Swapnapuron Society transforms vulnerable lives across West Bengal.', 'ichapore-swapnapuron'); ?>
+          <p class="lead text-light opacity-90 mb-4" style="max-width: 600px; font-weight: 400;">
+            <?php esc_html_e('Empowering marginalized children, women, and communities across 110+ slums through quality education, Thalassemia awareness, women\'s healthcare, and environmental conservation since 2009.', 'ichapore-swapnapuron'); ?>
           </p>
 
-          <div class="d-flex flex-wrap gap-3 mb-4">
-            <a href="<?php echo esc_url(home_url('/donate')); ?>" class="btn btn-terracotta btn-lg rounded-pill px-5 py-3 fw-bold text-uppercase d-inline-flex align-items-center gap-2 shadow-lg" style="font-size:0.85rem; letter-spacing:0.05em;">
-              <span><?php esc_html_e('Donate Now (80G Benefit)', 'ichapore-swapnapuron'); ?></span>
-              <span class="material-symbols-outlined fs-5">arrow_forward</span>
+          <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
+            <a href="<?php echo esc_url(home_url('/volunteer')); ?>" class="btn btn-terracotta rounded-pill px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 shadow-lg">
+              <span><?php esc_html_e('Get Involved', 'ichapore-swapnapuron'); ?></span>
+              <span class="material-symbols-outlined fs-5">volunteer_activism</span>
             </a>
-            <a href="#projects" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-bold text-uppercase d-inline-flex align-items-center gap-2" style="font-size:0.85rem; letter-spacing:0.05em;">
-              <span><?php esc_html_e('Explore Initiatives', 'ichapore-swapnapuron'); ?></span>
-              <span class="material-symbols-outlined fs-5">expand_more</span>
+            <a href="<?php echo esc_url(home_url('/donate')); ?>" class="btn btn-light rounded-pill px-4 py-3 fw-bold text-uppercase d-inline-flex align-items-center justify-content-center gap-2" style="font-size:0.78rem; letter-spacing:0.06em;">
+              <span><?php esc_html_e('Support Our Mission', 'ichapore-swapnapuron'); ?></span>
+              <span class="material-symbols-outlined fs-5 text-terracotta">favorite</span>
             </a>
           </div>
 
-          <div class="d-flex flex-wrap gap-2 gap-sm-3 text-light small fw-semibold pt-1">
-            <span class="badge rounded-pill bg-white bg-opacity-10 border border-white border-opacity-20 px-3 py-2 d-inline-flex align-items-center gap-2 text-white">
-              <span class="material-symbols-outlined text-warning fs-6">verified</span>
-              <span>50% Tax Exemption (80G)</span>
-            </span>
-            <span class="badge rounded-pill bg-white bg-opacity-10 border border-white border-opacity-20 px-3 py-2 d-inline-flex align-items-center gap-2 text-white">
-              <span class="material-symbols-outlined text-warning fs-6">volunteer_activism</span>
-              <span>100% Volunteer Driven</span>
-            </span>
-            <span class="badge rounded-pill bg-white bg-opacity-10 border border-white border-opacity-20 px-3 py-2 d-inline-flex align-items-center gap-2 text-white">
-              <span class="material-symbols-outlined text-warning fs-6">diversity_3</span>
-              <span>25,000+ Lives Reached</span>
-            </span>
-          </div>
-        </div>
-
-        <!-- Floating Quick Impact Card (Right) -->
-        <div class="col-lg-5">
-          <div class="p-4 p-sm-5 rounded-4 shadow-2xl text-white position-relative overflow-hidden" style="background: rgba(18, 24, 27, 0.88); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.7);">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-              <span class="badge rounded-pill bg-warning text-dark fw-bold px-3 py-1.5 small text-uppercase" style="letter-spacing:0.06em;">Quick Contribution</span>
-              <span class="text-white-50 small"><i class="material-symbols-outlined fs-6 align-middle text-success">lock</i> SSL Encrypted</span>
+          <div class="row g-3 pt-3 border-top border-light border-opacity-25 text-light small fw-semibold">
+            <div class="col-12 col-sm-4 d-flex align-items-center gap-2">
+              <span class="material-symbols-outlined text-warning">school</span>
+              <span><?php esc_html_e('Street Children Education', 'ichapore-swapnapuron'); ?></span>
             </div>
-            <h3 class="h4 fw-extrabold text-white mb-2">Fuel Grassroots Relief</h3>
-            <p class="text-white-50 small mb-4">Every rupee directly funds school bags, thalassemia carrier tests, and animal safety collars.</p>
-
-            <div class="row g-2 mb-3">
-              <div class="col-4">
-                <a href="<?php echo esc_url(home_url('/donate?amount=500')); ?>" class="btn btn-outline-light w-100 rounded-3 py-2 text-center text-decoration-none">
-                  <strong class="d-block fs-6">₹500</strong>
-                  <span class="small text-white-50" style="font-size:0.68rem;">1 Child Kit</span>
-                </a>
-              </div>
-              <div class="col-4">
-                <a href="<?php echo esc_url(home_url('/donate?amount=1000')); ?>" class="btn btn-outline-light w-100 rounded-3 py-2 text-center text-decoration-none">
-                  <strong class="d-block fs-6">₹1,000</strong>
-                  <span class="small text-white-50" style="font-size:0.68rem;">2 Students</span>
-                </a>
-              </div>
-              <div class="col-4">
-                <a href="<?php echo esc_url(home_url('/donate?amount=2500')); ?>" class="btn btn-warning w-100 rounded-3 py-2 text-center text-dark fw-bold text-decoration-none">
-                  <strong class="d-block fs-6">₹2,500</strong>
-                  <span class="small text-dark" style="font-size:0.68rem;">Health Camp</span>
-                </a>
-              </div>
+            <div class="col-12 col-sm-4 d-flex align-items-center gap-2">
+              <span class="material-symbols-outlined text-warning">medical_services</span>
+              <span><?php esc_html_e('Women & Child Healthcare', 'ichapore-swapnapuron'); ?></span>
             </div>
-
-            <a href="<?php echo esc_url(home_url('/donate')); ?>" class="btn btn-terracotta btn-lg w-100 rounded-pill py-3 fw-bold text-uppercase d-flex align-items-center justify-content-center gap-2 shadow">
-              <span>Donate Online with UPI / Cards</span>
-              <span class="material-symbols-outlined fs-5">arrow_forward</span>
-            </a>
-
-            <div class="text-center mt-3">
-              <span class="text-white-50" style="font-size:0.75rem;">Immediate 80G Tax Exemption Receipt (Form 10BE)</span>
+            <div class="col-12 col-sm-4 d-flex align-items-center gap-2">
+              <span class="material-symbols-outlined text-warning">forest</span>
+              <span><?php esc_html_e('10 Conservation Programs', 'ichapore-swapnapuron'); ?></span>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- IMPACT TICKER BAR -->
-  <section class="py-3 bg-charcoal text-white border-bottom border-secondary border-opacity-25" style="background-color: var(--charcoal-900);">
-    <div class="container">
-      <div class="row g-3 text-center align-items-center">
-        <div class="col-6 col-md-3">
-          <div class="fw-extrabold fs-4 text-warning">25,000+</div>
-          <div class="small text-white-50 text-uppercase" style="font-size:0.7rem; letter-spacing:0.06em;"><?php esc_html_e('Beneficiaries Touched', 'ichapore-swapnapuron'); ?></div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="fw-extrabold fs-4 text-white">15+ Years</div>
-          <div class="small text-white-50 text-uppercase" style="font-size:0.7rem; letter-spacing:0.06em;"><?php esc_html_e('Grassroots Track Record', 'ichapore-swapnapuron'); ?></div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="fw-extrabold fs-4 text-warning">80G &bull; 12A</div>
-          <div class="small text-white-50 text-uppercase" style="font-size:0.7rem; letter-spacing:0.06em;"><?php esc_html_e('Government Certified', 'ichapore-swapnapuron'); ?></div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="fw-extrabold fs-4 text-white">100% Direct</div>
-          <div class="small text-white-50 text-uppercase" style="font-size:0.7rem; letter-spacing:0.06em;"><?php esc_html_e('Field Delivery', 'ichapore-swapnapuron'); ?></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OUR PROJECTS GRID (WITH 100% RELIABLE FALLBACK) -->
-  <section class="py-5 py-lg-6" id="projects" style="background-color: var(--sand-50);">
-    <div class="container">
-      <div class="text-center mx-auto mb-5" style="max-width: 680px;">
-        <span class="text-uppercase fw-bold text-terracotta d-block mb-2" style="font-size:0.75rem; letter-spacing:0.1em;"><?php esc_html_e('Our Active Programs', 'ichapore-swapnapuron'); ?></span>
-        <h2 class="display-6 fw-extrabold mb-3"><?php esc_html_e('Grassroots Action Across Bengal', 'ichapore-swapnapuron'); ?></h2>
-        <p class="text-secondary small mb-0"><?php esc_html_e('Every initiative tackles an acute humanitarian or ecological crisis with hands-on volunteer action.', 'ichapore-swapnapuron'); ?></p>
-      </div>
-
-      <div class="row g-4">
-        <?php
-        $projects_query = new WP_Query(array(
-            'post_type'      => 'project',
-            'posts_per_page' => 9,
-            'orderby'        => 'menu_order',
-            'order'          => 'ASC'
-        ));
-
-        if ($projects_query->have_posts()):
-            while ($projects_query->have_posts()): $projects_query->the_post();
-                $slug = get_post_field('post_name', get_the_ID());
-                $badge = get_post_meta(get_the_ID(), '_project_badge', true) ?: __('Active Initiative', 'ichapore-swapnapuron');
-                $img_url = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'medium_large') : swapnapuron_get_project_image($slug);
-        ?>
-          <div class="col-md-6 col-lg-4">
-            <div class="editorial-card h-100 d-flex flex-column justify-content-between">
-              <div class="card-img-wrap position-relative">
-                <img src="<?php echo esc_url($img_url); ?>" class="w-100 h-100 object-fit-cover" alt="<?php the_title_attribute(); ?>" loading="lazy">
-                <span class="badge position-absolute top-0 end-0 m-3 bg-charcoal text-white small px-2.5 py-1 rounded-pill shadow-sm"><?php echo esc_html($badge); ?></span>
+        <!-- Side Documentary Card with HD Photo -->
+        <div class="col-lg-5 d-none d-md-block">
+          <div class="position-relative mx-auto" style="max-width: 420px;">
+            <div class="rounded-4 overflow-hidden shadow-lg border border-4 border-white bg-dark">
+              <img src="<?php echo esc_url(SWAPNAPURON_URI . '/assets/images/hero-school.jpg'); ?>" alt="Children studying happily at Ichapore Swapnapuron Society" class="w-100 object-fit-cover" style="height: 440px;">
+            </div>
+            <div class="position-absolute bottom-0 start-0 m-3 p-3 rounded-4 bg-white text-dark shadow-lg d-flex align-items-center gap-3" style="max-width: 280px;">
+              <div class="rounded-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width:44px; height:44px; background: var(--terracotta-100); color: var(--terracotta-600);">
+                <span class="material-symbols-outlined">child_care</span>
               </div>
-              <div class="p-4 bg-white d-flex flex-column justify-content-between flex-grow-1">
-                <div>
-                  <h3 class="h5 fw-bold mb-2">
-                    <a href="<?php the_permalink(); ?>" class="text-dark text-decoration-none hover-terracotta"><?php the_title(); ?></a>
-                  </h3>
-                  <p class="small text-secondary mb-3 lh-base">
-                    <?php echo wp_trim_words(get_the_excerpt(), 18); ?>
-                  </p>
-                </div>
-                <div class="pt-3 border-top border-sand-200 d-flex align-items-center justify-content-between">
-                  <a href="<?php the_permalink(); ?>" class="text-terracotta fw-bold small text-decoration-none d-inline-flex align-items-center gap-1">
-                    <span><?php esc_html_e('View Blueprint', 'ichapore-swapnapuron'); ?></span>
-                    <span class="material-symbols-outlined fs-6">arrow_forward</span>
-                  </a>
-                  <a href="<?php echo esc_url(home_url('/donate')); ?>" class="btn btn-sm btn-terracotta rounded-pill px-3 py-1 font-weight-bold" style="font-size:0.75rem;">
-                    <?php esc_html_e('Donate', 'ichapore-swapnapuron'); ?>
-                  </a>
-                </div>
+              <div>
+                <div class="fw-black fs-5 lh-1 fw-bold"><?php esc_html_e('60+ Children', 'ichapore-swapnapuron'); ?></div>
+                <small class="text-muted fw-medium"><?php esc_html_e('Impacted every year with free education', 'ichapore-swapnapuron'); ?></small>
               </div>
             </div>
           </div>
-        <?php
-            endwhile;
-            wp_reset_postdata();
-        else:
-            // High-quality static fallback for all 8 initiatives
-            $default_projects = array(
-                array(
-                    'slug'  => 'swasthya-chakra',
-                    'title' => 'Swasthya Chakra',
-                    'badge' => 'Healthcare & Medical Outreach',
-                    'desc'  => 'Delivering free doctor consultations, screenings, ECGs, and vital medicines to underserved slum families.',
-                ),
-                array(
-                    'slug'  => 'janmataru',
-                    'title' => 'Janmataru',
-                    'badge' => 'Afforestation Initiative',
-                    'desc'  => 'Planting dedicated saplings for birthdays and anniversaries, turning climate action into cherished relationships.',
-                ),
-                array(
-                    'slug'  => 'ayushman-bhava',
-                    'title' => 'Ayushman Bhava',
-                    'badge' => 'Animal Safety & Welfare',
-                    'desc'  => 'Fitting durable reflective collars on highway street dogs to eliminate fatal nocturnal road accidents.',
-                ),
-                array(
-                    'slug'  => 'happy',
-                    'title' => 'Smile with Santa',
-                    'badge' => 'Childhood Joy & Winter Relief',
-                    'desc'  => 'Distributing warm woollen sweaters, blankets, storybooks, and holiday gift hampers to pavement children.',
-                ),
-                array(
-                    'slug'  => 'udaan',
-                    'title' => 'Project Udaan',
-                    'badge' => 'Thalassemia Prevention',
-                    'desc'  => 'School carrier blood testing, pre-marital counselling, and blood donor drives to eliminate Thalassemia.',
-                ),
-                array(
-                    'slug'  => 'anandadhara',
-                    'title' => 'Anandadhara',
-                    'badge' => 'Food Rescue & Zero Hunger',
-                    'desc'  => 'Hygienic surplus banquet food rescue and midnight warm meal delivery to hungry railway platform families.',
-                ),
-                array(
-                    'slug'  => 'vidharthi',
-                    'title' => 'Vidharthi',
-                    'badge' => 'Mission Education',
-                    'desc'  => 'School supplies, textbooks, geometry kits, and evening remedial tutoring for marginalized slum children.',
-                ),
-                array(
-                    'slug'  => 'ashiana',
-                    'title' => 'Project Ashiana',
-                    'badge' => 'Bird Protection & Ecology',
-                    'desc'  => 'Handcrafted clay nesting handis and freshwater feeders hung across urban trees to save sparrow biodiversity.',
-                ),
-            );
-
-            foreach ($default_projects as $dp):
-                $img_url = swapnapuron_get_project_image($dp['slug']);
-                $link = esc_url(home_url('/project/' . $dp['slug'] . '/'));
-        ?>
-          <div class="col-md-6 col-lg-4">
-            <div class="editorial-card h-100 d-flex flex-column justify-content-between">
-              <div class="card-img-wrap position-relative">
-                <img src="<?php echo esc_url($img_url); ?>" class="w-100 h-100 object-fit-cover" alt="<?php echo esc_attr($dp['title']); ?>" loading="lazy">
-                <span class="badge position-absolute top-0 end-0 m-3 bg-charcoal text-white small px-2.5 py-1 rounded-pill shadow-sm"><?php echo esc_html($dp['badge']); ?></span>
-              </div>
-              <div class="p-4 bg-white d-flex flex-column justify-content-between flex-grow-1">
-                <div>
-                  <h3 class="h5 fw-bold mb-2">
-                    <a href="<?php echo $link; ?>" class="text-dark text-decoration-none hover-terracotta"><?php echo esc_html($dp['title']); ?></a>
-                  </h3>
-                  <p class="small text-secondary mb-3 lh-base">
-                    <?php echo esc_html($dp['desc']); ?>
-                  </p>
-                </div>
-                <div class="pt-3 border-top border-sand-200 d-flex align-items-center justify-content-between">
-                  <a href="<?php echo $link; ?>" class="text-terracotta fw-bold small text-decoration-none d-inline-flex align-items-center gap-1">
-                    <span><?php esc_html_e('View Blueprint', 'ichapore-swapnapuron'); ?></span>
-                    <span class="material-symbols-outlined fs-6">arrow_forward</span>
-                  </a>
-                  <a href="<?php echo esc_url(home_url('/donate')); ?>" class="btn btn-sm btn-terracotta rounded-pill px-3 py-1 font-weight-bold" style="font-size:0.75rem;">
-                    <?php esc_html_e('Donate', 'ichapore-swapnapuron'); ?>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        <?php
-            endforeach;
-        endif;
-        ?>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- IMPACT METRICS STRIP -->
-  <section class="bg-sand-warm py-5 border-top border-bottom border-sand-300">
+  <section class="bg-sand-warm py-5 border-bottom" style="border-color: var(--sand-300) !important;" id="metrics">
     <div class="container">
       <div class="row g-3 g-md-4">
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="stat-card p-4 h-100 d-flex flex-column justify-content-between">
             <div>
-              <span class="text-uppercase fw-bold text-terracotta d-block mb-2" style="font-size:0.7rem; letter-spacing:0.1em;">Education</span>
+              <span class="text-uppercase fw-bold text-terracotta d-block mb-2" style="font-size:0.7rem; letter-spacing:0.1em;"><?php esc_html_e('Education', 'ichapore-swapnapuron'); ?></span>
               <div class="stat-number mb-2">60</div>
-              <p class="fw-bold mb-0 small">Children are impacted every year</p>
+              <p class="fw-bold mb-0 small"><?php esc_html_e('Children are impacted every year', 'ichapore-swapnapuron'); ?></p>
             </div>
-            <p class="text-muted mb-0 mt-3 pt-2 border-top" style="font-size:0.78rem;">Access to quality education, mentorship, and learning resources.</p>
+            <p class="text-muted mb-0 mt-3 pt-2 border-top" style="font-size:0.78rem;"><?php esc_html_e('Access to quality education, mentorship, and learning resources.', 'ichapore-swapnapuron'); ?></p>
           </div>
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="stat-card p-4 h-100 d-flex flex-column justify-content-between">
             <div>
-              <span class="text-uppercase fw-bold text-terracotta d-block mb-2" style="font-size:0.7rem; letter-spacing:0.1em;">Community Reach</span>
+              <span class="text-uppercase fw-bold text-terracotta d-block mb-2" style="font-size:0.7rem; letter-spacing:0.1em;"><?php esc_html_e('Community Reach', 'ichapore-swapnapuron'); ?></span>
               <div class="stat-number mb-2">110+</div>
-              <p class="fw-bold mb-0 small">Slums are reached out to across the district</p>
+              <p class="fw-bold mb-0 small"><?php esc_html_e('Slums are reached out to across the district', 'ichapore-swapnapuron'); ?></p>
             </div>
-            <p class="text-muted mb-0 mt-3 pt-2 border-top" style="font-size:0.78rem;">Grassroots relief, awareness, and community support drives.</p>
+            <p class="text-muted mb-0 mt-3 pt-2 border-top" style="font-size:0.78rem;"><?php esc_html_e('Grassroots relief, awareness, and community support drives.', 'ichapore-swapnapuron'); ?></p>
           </div>
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="stat-card p-4 h-100 d-flex flex-column justify-content-between">
             <div>
-              <span class="text-uppercase fw-bold text-terracotta d-block mb-2" style="font-size:0.7rem; letter-spacing:0.1em;">Healthcare</span>
+              <span class="text-uppercase fw-bold text-terracotta d-block mb-2" style="font-size:0.7rem; letter-spacing:0.1em;"><?php esc_html_e('Healthcare', 'ichapore-swapnapuron'); ?></span>
               <div class="stat-number mb-2">300+</div>
-              <p class="fw-bold mb-0 small">Women's health care provided</p>
+              <p class="fw-bold mb-0 small"><?php esc_html_e('Women\'s health care provided', 'ichapore-swapnapuron'); ?></p>
             </div>
-            <p class="text-muted mb-0 mt-3 pt-2 border-top" style="font-size:0.78rem;">Preventive screenings, maternal care, and essential medicines.</p>
+            <p class="text-muted mb-0 mt-3 pt-2 border-top" style="font-size:0.78rem;"><?php esc_html_e('Preventive screenings, maternal care, and essential medicines.', 'ichapore-swapnapuron'); ?></p>
           </div>
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="stat-card p-4 h-100 d-flex flex-column justify-content-between">
             <div>
-              <span class="text-uppercase fw-bold text-terracotta d-block mb-2" style="font-size:0.7rem; letter-spacing:0.1em;">Environment</span>
+              <span class="text-uppercase fw-bold text-terracotta d-block mb-2" style="font-size:0.7rem; letter-spacing:0.1em;"><?php esc_html_e('Environment', 'ichapore-swapnapuron'); ?></span>
               <div class="stat-number mb-2">10</div>
-              <p class="fw-bold mb-0 small">Conservation Programs</p>
+              <p class="fw-bold mb-0 small"><?php esc_html_e('Conservation Programs', 'ichapore-swapnapuron'); ?></p>
             </div>
-            <p class="text-muted mb-0 mt-3 pt-2 border-top" style="font-size:0.78rem;">Tree plantation, ecological awareness, and green initiatives.</p>
+            <p class="text-muted mb-0 mt-3 pt-2 border-top" style="font-size:0.78rem;"><?php esc_html_e('Tree plantation, ecological awareness, and green initiatives.', 'ichapore-swapnapuron'); ?></p>
           </div>
         </div>
       </div>
@@ -330,29 +139,30 @@ get_header();
   </section>
 
   <!-- OUR STORY & WHY TRUST US -->
-  <section class="py-5 py-lg-6 border-bottom border-sand-300" style="background-color: var(--sand-50);">
+  <section class="py-5 py-lg-6 border-bottom" style="border-color: var(--sand-300) !important;" id="story">
     <div class="container py-lg-4">
       <div class="row g-4 g-lg-5 align-items-stretch">
+        <!-- Our Story -->
         <div class="col-lg-6">
           <div class="editorial-card h-100 d-flex flex-column">
             <div class="card-img-wrap">
-              <img src="<?php echo esc_url(SWAPNAPURON_URI . '/assets/images/tutoring-academy.jpg'); ?>" alt="Community tutoring session in Ichapore" loading="lazy">
-              <span class="badge rounded-pill bg-dark bg-opacity-75 position-absolute top-0 start-0 m-3 px-3 py-2 text-uppercase" style="font-size:0.7rem; letter-spacing:0.08em;">Since 2009</span>
+              <img src="<?php echo esc_url(SWAPNAPURON_URI . '/assets/images/tutoring-academy.jpg'); ?>" alt="Open-air community tutoring session in Ichapore" loading="lazy">
+              <span class="badge rounded-pill bg-dark bg-opacity-75 position-absolute top-0 start-0 m-3 px-3 py-2 text-uppercase" style="font-size:0.7rem; letter-spacing:0.08em;"><?php esc_html_e('Since 2009', 'ichapore-swapnapuron'); ?></span>
             </div>
             <div class="p-4 p-sm-5 d-flex flex-column justify-content-between flex-grow-1">
               <div>
                 <div class="d-flex align-items-center gap-2 text-terracotta fw-bold text-uppercase mb-2" style="font-size:0.72rem; letter-spacing:0.08em;">
                   <span class="material-symbols-outlined fs-6">history_edu</span>
-                  <span>Our Story</span>
+                  <span><?php esc_html_e('Our Story', 'ichapore-swapnapuron'); ?></span>
                 </div>
-                <h2 class="h3 fw-extrabold mb-3">A Decade &amp; More of Grassroots Transformation</h2>
+                <h2 class="h3 fw-extrabold mb-3"><?php esc_html_e('A Decade & More of Grassroots Transformation', 'ichapore-swapnapuron'); ?></h2>
                 <p class="text-secondary lh-lg mb-4">
-                  Founded in 2009 by passionate volunteers committed to grassroots upliftment, Ichapore Swapnapuron Society has been at the forefront of social transformation across North 24 Parganas.
+                  <?php esc_html_e('Founded in 2009 by a group of passionate individuals committed to creating positive change, the Ichapore Swapnapuron Society has been at the forefront of social transformation in our community.', 'ichapore-swapnapuron'); ?>
                 </p>
               </div>
               <div>
                 <a href="<?php echo esc_url(home_url('/who-we-are')); ?>" class="text-decoration-none fw-bold text-uppercase text-terracotta d-inline-flex align-items-center gap-1" style="font-size:0.78rem; letter-spacing:0.06em;">
-                  <span>Read More About Us</span>
+                  <span><?php esc_html_e('Read More About Us', 'ichapore-swapnapuron'); ?></span>
                   <span class="material-symbols-outlined fs-6">arrow_forward</span>
                 </a>
               </div>
@@ -360,26 +170,27 @@ get_header();
           </div>
         </div>
 
+        <!-- Why Trust Us -->
         <div class="col-lg-6">
           <div class="editorial-card h-100 d-flex flex-column">
             <div class="card-img-wrap">
               <img src="<?php echo esc_url(SWAPNAPURON_URI . '/assets/images/medical-camp.jpg'); ?>" alt="Community healthcare camp in rural Bengal" loading="lazy">
-              <span class="badge rounded-pill bg-success position-absolute top-0 start-0 m-3 px-3 py-2 text-uppercase" style="font-size:0.7rem; letter-spacing:0.08em;">Good Governance</span>
+              <span class="badge rounded-pill bg-success position-absolute top-0 start-0 m-3 px-3 py-2 text-uppercase" style="font-size:0.7rem; letter-spacing:0.08em;"><?php esc_html_e('Good Governance', 'ichapore-swapnapuron'); ?></span>
             </div>
             <div class="p-4 p-sm-5 d-flex flex-column justify-content-between flex-grow-1">
               <div>
                 <div class="d-flex align-items-center gap-2 text-moss fw-bold text-uppercase mb-2" style="font-size:0.72rem; letter-spacing:0.08em;">
                   <span class="material-symbols-outlined fs-6">verified_user</span>
-                  <span>Why Trust Us</span>
+                  <span><?php esc_html_e('Why Trust Us', 'ichapore-swapnapuron'); ?></span>
                 </div>
-                <h2 class="h3 fw-extrabold mb-3">Credibility, Accountability &amp; Transparency</h2>
+                <h2 class="h3 fw-extrabold mb-3"><?php esc_html_e('Credibility, Accountability & Transparency', 'ichapore-swapnapuron'); ?></h2>
                 <p class="text-secondary lh-lg mb-4">
-                  Credibility and accountability have always been our benchmark. Operating under Section 80G and 12A with audited transparent accounts ensures 100% of donor funding translates directly into field impact.
+                  <?php esc_html_e('Credibility and accountability have always been the benchmark for Ichapore Swapnapuron Society and are achieved through the promotion of principles of good governance in the processes and practices.', 'ichapore-swapnapuron'); ?>
                 </p>
               </div>
               <div>
                 <a href="<?php echo esc_url(home_url('/why-trust-us')); ?>" class="text-decoration-none fw-bold text-uppercase text-terracotta d-inline-flex align-items-center gap-1" style="font-size:0.78rem; letter-spacing:0.06em;">
-                  <span>Read Why Trust Us</span>
+                  <span><?php esc_html_e('Read Why Trust Us', 'ichapore-swapnapuron'); ?></span>
                   <span class="material-symbols-outlined fs-6">arrow_forward</span>
                 </a>
               </div>
@@ -390,80 +201,345 @@ get_header();
     </div>
   </section>
 
-  <!-- 4 STRATEGIC PILLARS -->
-  <section class="py-5 py-lg-6 bg-charcoal text-white" style="background-color: var(--charcoal-900);">
-    <div class="container">
-      <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-        <span class="text-uppercase fw-bold text-warning d-block mb-1" style="font-size:0.75rem; letter-spacing:0.1em;"><?php esc_html_e('Four Strategic Pillars', 'ichapore-swapnapuron'); ?></span>
-        <h2 class="display-6 fw-extrabold text-white mb-0"><?php esc_html_e('How We Drive Lasting Change', 'ichapore-swapnapuron'); ?></h2>
+  <!-- VISION & MISSION -->
+  <section class="bg-sand-soft py-5 border-bottom" style="border-color: var(--sand-300) !important;" id="vision-mission">
+    <div class="container py-lg-4">
+      <div class="text-center mx-auto mb-5" style="max-width: 680px;">
+        <span class="text-uppercase fw-bold text-terracotta d-block mb-2" style="font-size:0.75rem; letter-spacing:0.1em;"><?php esc_html_e('Purpose & Direction', 'ichapore-swapnapuron'); ?></span>
+        <h2 class="display-6 fw-extrabold"><?php esc_html_e('Our Vision & Mission', 'ichapore-swapnapuron'); ?></h2>
       </div>
 
       <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
-            <div class="d-inline-flex align-items-center justify-content-center rounded-3 p-3 mb-3 text-warning" style="background: rgba(241, 196, 15, 0.15);">
-              <span class="material-symbols-outlined fs-2">medical_services</span>
+        <div class="col-md-6">
+          <div class="bg-white rounded-4 p-4 p-sm-5 border h-100 shadow-sm" style="border-color: var(--sand-300) !important;">
+            <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3" style="width:48px; height:48px; background: var(--terracotta-100); color: var(--terracotta-600);">
+              <span class="material-symbols-outlined">visibility</span>
             </div>
-            <h3 class="h5 fw-bold text-white mb-2"><?php esc_html_e('Healthcare & Thalassemia', 'ichapore-swapnapuron'); ?></h3>
-            <p class="small text-white-50 mb-0 lh-base"><?php esc_html_e('Doorstep mobile slum diagnosis, free medicines, and student carrier screening camps under Swasthya Chakra & Udaan.', 'ichapore-swapnapuron'); ?></p>
+            <h3 class="h4 fw-extrabold text-capitalize mb-3"><?php esc_html_e('Vision', 'ichapore-swapnapuron'); ?></h3>
+            <p class="text-secondary lh-lg mb-4">
+              <?php esc_html_e('At Ichapore Swapnapuron Society, our vision is to cultivate a compassionate and equitable society where every child has access to quality education, every woman enjoys optimal health, and every living being is treated with kindness and respect.', 'ichapore-swapnapuron'); ?>
+            </p>
+            <a href="<?php echo esc_url(home_url('/mission-vision')); ?>" class="text-decoration-none fw-bold text-uppercase text-terracotta small d-inline-flex align-items-center gap-1">
+              <span><?php esc_html_e('Explore Full Mission & Vision', 'ichapore-swapnapuron'); ?></span>
+              <span class="material-symbols-outlined fs-6">arrow_forward</span>
+            </a>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
-            <div class="d-inline-flex align-items-center justify-content-center rounded-3 p-3 mb-3 text-info" style="background: rgba(52, 152, 219, 0.15);">
-              <span class="material-symbols-outlined fs-2">school</span>
+        <div class="col-md-6">
+          <div class="bg-white rounded-4 p-4 p-sm-5 border h-100 shadow-sm" style="border-color: var(--sand-300) !important;">
+            <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3" style="width:48px; height:48px; background: #e8f3ec; color: var(--moss-600);">
+              <span class="material-symbols-outlined">flag</span>
             </div>
-            <h3 class="h5 fw-bold text-white mb-2"><?php esc_html_e('Child Education & Joy', 'ichapore-swapnapuron'); ?></h3>
-            <p class="small text-white-50 mb-0 lh-base"><?php esc_html_e('Free backpacks, stationery, textbooks, and holiday winter relief drives for pavement children under Vidharthi & Smile.', 'ichapore-swapnapuron'); ?></p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
-            <div class="d-inline-flex align-items-center justify-content-center rounded-3 p-3 mb-3 text-success" style="background: rgba(39, 174, 96, 0.15);">
-              <span class="material-symbols-outlined fs-2">restaurant</span>
-            </div>
-            <h3 class="h5 fw-bold text-white mb-2"><?php esc_html_e('Food Rescue & Zero Hunger', 'ichapore-swapnapuron'); ?></h3>
-            <p class="small text-white-50 mb-0 lh-base"><?php esc_html_e('Collecting banquet surplus, hygienic foil packaging, and midnight platform distributions under Anandadhara.', 'ichapore-swapnapuron'); ?></p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
-            <div class="d-inline-flex align-items-center justify-content-center rounded-3 p-3 mb-3 text-danger" style="background: rgba(231, 76, 60, 0.15);">
-              <span class="material-symbols-outlined fs-2">pets</span>
-            </div>
-            <h3 class="h5 fw-bold text-white mb-2"><?php esc_html_e('Animal Safety & Ecology', 'ichapore-swapnapuron'); ?></h3>
-            <p class="small text-white-50 mb-0 lh-base"><?php esc_html_e('Fitting reflective safety collars on highway street dogs (Ayushman Bhava) and hanging clay sparrow nests (Ashiana).', 'ichapore-swapnapuron'); ?></p>
+            <h3 class="h4 fw-extrabold mb-3"><?php esc_html_e('Mission', 'ichapore-swapnapuron'); ?></h3>
+            <p class="text-secondary lh-lg mb-4">
+              <?php esc_html_e('Our mission is to uplift and empower marginalized individuals and communities through targeted initiatives that focus on Education for Street Children: providing street children with access to quality education, mentorship, and resources that enable them to break the cycle of poverty and realize their full potential.', 'ichapore-swapnapuron'); ?>
+            </p>
+            <a href="<?php echo esc_url(home_url('/mission-vision')); ?>" class="text-decoration-none fw-bold text-uppercase text-terracotta small d-inline-flex align-items-center gap-1">
+              <span><?php esc_html_e('Explore Full Mission & Vision', 'ichapore-swapnapuron'); ?></span>
+              <span class="material-symbols-outlined fs-6">arrow_forward</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRE-FOOTER BANNER -->
-  <section class="py-5" style="background-color: var(--sand-100);">
-    <div class="container">
-      <div class="pre-footer-banner text-center mx-auto" style="max-width: 960px;">
-        <span class="badge rounded-pill bg-white text-dark mb-3 px-3 py-2 text-uppercase fw-bold" style="font-size:0.7rem; letter-spacing:0.08em;"><?php esc_html_e('Tax Benefit Section 80G', 'ichapore-swapnapuron'); ?></span>
-        <h2 class="display-6 fw-extrabold mb-3"><?php esc_html_e('Your Small Kindness Protects a Life Tomorrow', 'ichapore-swapnapuron'); ?></h2>
-        <p class="lead opacity-90 mb-4 mx-auto text-secondary" style="max-width: 600px; font-size:1.05rem;">
-          <?php esc_html_e('Contributions eligible for 50% tax exemption. Donate via UPI, Net Banking, or Cards with instant certificate issuance.', 'ichapore-swapnapuron'); ?>
+  <!-- UPCOMING EVENTS & FLAGSHIP INITIATIVES -->
+  <section class="py-5 border-bottom" style="border-color: var(--sand-300) !important;" id="events">
+    <div class="container py-lg-4">
+      <div class="row align-items-end mb-5 g-3">
+        <div class="col-lg-8">
+          <div class="d-inline-flex align-items-center gap-2 text-terracotta fw-bold text-uppercase mb-2" style="font-size:0.75rem; letter-spacing:0.1em;">
+            <span class="material-symbols-outlined fs-6">event_available</span>
+            <span><?php esc_html_e('Upcoming Events & Flagship Campaigns', 'ichapore-swapnapuron'); ?></span>
+          </div>
+          <h2 class="display-6 fw-extrabold mb-0"><?php esc_html_e('Join Our Active Community Drives', 'ichapore-swapnapuron'); ?></h2>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="<?php echo esc_url(home_url('/volunteer')); ?>" class="btn btn-outline-sand rounded-pill px-4 py-2">
+            <?php esc_html_e('Get Involved', 'ichapore-swapnapuron'); ?>
+          </a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Event 1: Let's Stop Thalassemia -->
+        <div class="col-md-6">
+          <div class="editorial-card h-100 d-flex flex-column">
+            <div class="card-img-wrap" style="height: 280px;">
+              <img src="<?php echo esc_url(SWAPNAPURON_URI . '/assets/images/thalassemia-care.jpg'); ?>" alt="Let's Stop Thalassemia - Udaan Initiative" loading="lazy">
+              <span class="badge rounded-pill bg-danger position-absolute top-0 start-0 m-3 px-3 py-2 text-uppercase" style="font-size:0.7rem; letter-spacing:0.08em;"><?php esc_html_e('Project Udaan • Healthcare', 'ichapore-swapnapuron'); ?></span>
+            </div>
+            <div class="p-4 p-sm-5 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <h3 class="h3 fw-extrabold mb-3"><?php esc_html_e('Let\'s Stop Thalassemia', 'ichapore-swapnapuron'); ?></h3>
+                <p class="text-secondary lh-lg mb-4">
+                  <?php esc_html_e('Our flagship Thalassemia awareness, screening, and patient support initiative. Join us in spreading awareness, facilitating carrier testing, and supporting children fighting Thalassemia.', 'ichapore-swapnapuron'); ?>
+                </p>
+              </div>
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-3 border-top">
+                <a href="<?php echo esc_url(home_url('/contact')); ?>" class="btn btn-terracotta rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2">
+                  <span><?php esc_html_e('Join with Us', 'ichapore-swapnapuron'); ?></span>
+                  <span class="material-symbols-outlined fs-6">arrow_forward</span>
+                </a>
+                <a href="<?php echo esc_url(home_url('/donate')); ?>" class="text-decoration-none fw-bold text-dark small"><?php esc_html_e('Support Udaan →', 'ichapore-swapnapuron'); ?></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2: Smile with Santa -->
+        <div class="col-md-6">
+          <div class="editorial-card h-100 d-flex flex-column">
+            <div class="card-img-wrap" style="height: 280px;">
+              <img src="<?php echo esc_url(SWAPNAPURON_URI . '/assets/images/winter-relief.jpg'); ?>" alt="Smile with Santa - Winter Relief and Joy" loading="lazy">
+              <span class="badge rounded-pill bg-dark position-absolute top-0 start-0 m-3 px-3 py-2 text-uppercase" style="font-size:0.7rem; letter-spacing:0.08em;"><?php esc_html_e('Winter Relief • Project Smile', 'ichapore-swapnapuron'); ?></span>
+            </div>
+            <div class="p-4 p-sm-5 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <h3 class="h3 fw-extrabold mb-2"><?php esc_html_e('Smile with Santa', 'ichapore-swapnapuron'); ?></h3>
+                <p class="fst-italic text-terracotta fw-semibold small mb-3">
+                  "It's not how much we give but how much love we put into giving"
+                </p>
+                <p class="text-secondary lh-lg mb-4">
+                  <?php esc_html_e('Bringing warmth, blankets, gifts, and festive joy to underprivileged children and families across our community during the winter season.', 'ichapore-swapnapuron'); ?>
+                </p>
+              </div>
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-3 border-top">
+                <a href="<?php echo esc_url(home_url('/contact')); ?>" class="btn btn-terracotta rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2">
+                  <span><?php esc_html_e('Join with Us', 'ichapore-swapnapuron'); ?></span>
+                  <span class="material-symbols-outlined fs-6">arrow_forward</span>
+                </a>
+                <a href="<?php echo esc_url(home_url('/donate')); ?>" class="text-decoration-none fw-bold text-dark small"><?php esc_html_e('Gift Warmth →', 'ichapore-swapnapuron'); ?></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW YOU CAN HELP / VOLUNTEER -->
+  <section class="bg-sand-warm py-5 border-bottom" style="border-color: var(--sand-300) !important;" id="volunteer">
+    <div class="container py-lg-4">
+      <div class="bg-white rounded-4 p-4 p-sm-5 shadow-lg border" style="border-color: var(--sand-300) !important;">
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-lg-7">
+            <span class="text-uppercase fw-bold text-terracotta d-block mb-2" style="font-size:0.75rem; letter-spacing:0.1em;"><?php esc_html_e('How You Can Help', 'ichapore-swapnapuron'); ?></span>
+            <h2 class="display-6 fw-extrabold mb-3"><?php esc_html_e('Volunteer to Serve, Spread Some Smiles!', 'ichapore-swapnapuron'); ?></h2>
+            <p class="text-secondary lh-lg mb-4">
+              <?php esc_html_e('Ichapore Swapnapuron Society believes that unless members of the civil society are involved proactively in the process of development, sustainable change will not happen. We encourage and invite individuals for volunteer opportunities and volunteer registration, to be an active part of our organization and share the same vision and purpose as us – to work for the welfare of children and their families.', 'ichapore-swapnapuron'); ?>
+            </p>
+            <p class="text-secondary lh-lg mb-4">
+              <?php esc_html_e('Volunteers are the backbone of every organization – they not only carry the organization’s ideals within them, but also spread the message far and beyond, sensitizing the society towards the cause.', 'ichapore-swapnapuron'); ?>
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="<?php echo esc_url(home_url('/volunteer')); ?>" class="btn btn-terracotta rounded-pill px-4 py-3 d-inline-flex align-items-center gap-2">
+                <span><?php esc_html_e('Join Us as a Volunteer', 'ichapore-swapnapuron'); ?></span>
+                <span class="material-symbols-outlined fs-6">arrow_forward</span>
+              </a>
+              <?php $ig_link = swapnapuron_opt('swapnapuron_instagram', 'https://www.instagram.com/ichaporeswapnapuronsociety'); ?>
+              <?php if ($ig_link): ?>
+                <a href="<?php echo esc_url($ig_link); ?>" target="_blank" rel="noopener" class="btn btn-outline-sand rounded-pill px-4 py-3 d-inline-flex align-items-center gap-2">
+                  <span><?php esc_html_e('Follow Us on Instagram', 'ichapore-swapnapuron'); ?></span>
+                  <span class="material-symbols-outlined fs-6">photo_camera</span>
+                </a>
+              <?php endif; ?>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="rounded-4 overflow-hidden shadow-sm border">
+              <img src="<?php echo esc_url(SWAPNAPURON_URI . '/assets/images/hero-school.jpg'); ?>" alt="Volunteers and students at Ichapore Swapnapuron Society" class="w-100 object-fit-cover" style="height: 360px;" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECT DONATION SECTION -->
+  <section class="bg-charcoal py-5" id="donate">
+    <div class="container py-lg-4" style="max-width: 880px;">
+      <div class="text-center mb-5">
+        <span class="badge rounded-pill px-3 py-2 mb-3 text-uppercase" style="background: var(--charcoal-800); border: 1px solid var(--charcoal-700); color:#fbe7e4; letter-spacing:0.08em;">
+          <?php esc_html_e('Direct Community Support', 'ichapore-swapnapuron'); ?>
+        </span>
+        <h2 class="display-5 fw-black text-white mb-3"><?php esc_html_e('Make a Contribution Today', 'ichapore-swapnapuron'); ?></h2>
+        <p class="text-light opacity-75 mx-auto" style="max-width: 600px;">
+          <?php esc_html_e('Every contribution directly supports street children\'s education, Thalassemia awareness & patient aid, women\'s healthcare, and seasonal relief drives.', 'ichapore-swapnapuron'); ?>
         </p>
-        <div class="d-flex flex-wrap justify-content-center gap-3">
-          <a href="<?php echo esc_url(home_url('/donate')); ?>" class="btn btn-terracotta rounded-pill px-5 py-3 d-inline-flex align-items-center gap-2 shadow">
-            <span><?php esc_html_e('Donate to General Fund', 'ichapore-swapnapuron'); ?></span>
-            <span class="material-symbols-outlined fs-6">favorite</span>
-          </a>
-          <a href="<?php echo esc_url(home_url('/volunteer')); ?>" class="btn btn-light rounded-pill px-4 py-3 fw-bold text-uppercase d-inline-flex align-items-center gap-2 border" style="font-size:0.78rem; letter-spacing:0.06em;">
-            <span><?php esc_html_e('Volunteer on Field', 'ichapore-swapnapuron'); ?></span>
-            <span class="material-symbols-outlined fs-6 text-terracotta">volunteer_activism</span>
-          </a>
+      </div>
+
+      <div class="bg-white text-dark rounded-4 p-4 p-sm-5 shadow-lg">
+        <?php if (shortcode_exists('swapnapuron_donation_form')): ?>
+          <?php echo do_shortcode('[swapnapuron_donation_form]'); ?>
+        <?php else: ?>
+          <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3 pb-4 border-bottom">
+            <div class="freq-pill d-inline-flex p-1 bg-light rounded-pill border">
+              <button type="button" class="btn btn-sm rounded-pill px-3 py-1.5 fw-bold active" id="freq-monthly" onclick="setHomeFreq('monthly')"><?php esc_html_e('Monthly Support', 'ichapore-swapnapuron'); ?></button>
+              <button type="button" class="btn btn-sm rounded-pill px-3 py-1.5 fw-bold text-secondary" id="freq-once" onclick="setHomeFreq('once')"><?php esc_html_e('One-Time Gift', 'ichapore-swapnapuron'); ?></button>
+            </div>
+            <div class="d-flex align-items-center gap-1 text-moss fw-semibold small">
+              <span class="material-symbols-outlined fs-6">verified</span>
+              <span><?php esc_html_e('Official Society Portal', 'ichapore-swapnapuron'); ?></span>
+            </div>
+          </div>
+
+          <div class="my-4">
+            <label class="form-label text-uppercase fw-bold small text-secondary"><?php esc_html_e('Select Contribution Amount (INR)', 'ichapore-swapnapuron'); ?></label>
+            <div class="row g-2 g-sm-3 mb-3">
+              <div class="col-6 col-sm-3"><button type="button" class="w-100 amount-btn active fs-5" onclick="selectHomeAmount(500, this)">₹500</button></div>
+              <div class="col-6 col-sm-3"><button type="button" class="w-100 amount-btn fs-5" onclick="selectHomeAmount(1500, this)">₹1,500</button></div>
+              <div class="col-6 col-sm-3"><button type="button" class="w-100 amount-btn fs-5" onclick="selectHomeAmount(2500, this)">₹2,500</button></div>
+              <div class="col-6 col-sm-3"><button type="button" class="w-100 amount-btn fs-5" onclick="selectHomeAmount(5000, this)">₹5,000</button></div>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text bg-light fw-bold">₹</span>
+              <input type="number" min="1" id="custom-amt-input" class="form-control" placeholder="<?php esc_attr_e('Or enter custom amount in INR', 'ichapore-swapnapuron'); ?>" oninput="handleHomeCustomAmount(this.value)">
+            </div>
+          </div>
+
+          <div class="p-3 rounded-3 d-flex align-items-start gap-3 mb-4" style="background: var(--terracotta-50); border: 1px solid var(--terracotta-100);">
+            <span class="material-symbols-outlined text-terracotta fs-4 mt-1">volunteer_activism</span>
+            <div>
+              <span class="d-block text-uppercase fw-bold text-terracotta" style="font-size:0.72rem; letter-spacing:0.06em;"><?php esc_html_e('Your Impact', 'ichapore-swapnapuron'); ?></span>
+              <p class="mb-0 small fw-medium" id="impact-description">
+                <strong>₹500</strong> supports learning materials, notebooks, and mentorship for street children in our education program.
+              </p>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+            <a href="<?php echo esc_url(home_url('/donate')); ?>" class="btn btn-terracotta rounded-pill px-5 py-3 w-100 w-sm-auto d-inline-flex align-items-center justify-content-center gap-2 shadow text-decoration-none">
+              <span class="material-symbols-outlined fs-6">lock</span>
+              <span><?php esc_html_e('Proceed to Donate Now', 'ichapore-swapnapuron'); ?></span>
+            </a>
+            <span class="small text-muted fw-medium"><?php esc_html_e('100% direct community contribution &bull; 80G Certified', 'ichapore-swapnapuron'); ?></span>
+          </div>
+        <?php endif; ?>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT INFORMATION SECTION -->
+  <section class="bg-sand-soft py-5 border-bottom" style="border-color: var(--sand-300) !important;" id="contact">
+    <div class="container py-lg-4">
+      <div class="row g-4 g-lg-5 align-items-start">
+        <div class="col-lg-5">
+          <span class="text-uppercase fw-bold text-terracotta d-block mb-2" style="font-size:0.75rem; letter-spacing:0.1em;"><?php esc_html_e('Reach Out', 'ichapore-swapnapuron'); ?></span>
+          <h2 class="display-6 fw-extrabold mb-4"><?php esc_html_e('Contact Information', 'ichapore-swapnapuron'); ?></h2>
+
+          <div class="space-y-3 d-flex flex-column gap-3">
+            <div class="bg-white rounded-4 p-4 border shadow-sm" style="border-color: var(--sand-300) !important;">
+              <h3 class="h6 fw-bold text-uppercase text-terracotta mb-2"><?php esc_html_e('Address', 'ichapore-swapnapuron'); ?></h3>
+              <p class="mb-0 text-secondary"><?php echo esc_html($addr); ?></p>
+            </div>
+
+            <div class="bg-white rounded-4 p-4 border shadow-sm" style="border-color: var(--sand-300) !important;">
+              <h3 class="h6 fw-bold text-uppercase text-terracotta mb-2"><?php esc_html_e('Phone', 'ichapore-swapnapuron'); ?></h3>
+              <div class="d-flex flex-column gap-1">
+                <?php if ($phone1): ?>
+                  <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', $phone1)); ?>" class="text-decoration-none text-dark fw-semibold"><?php echo esc_html($phone1); ?></a>
+                <?php endif; ?>
+                <?php if ($phone2): ?>
+                  <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', $phone2)); ?>" class="text-decoration-none text-dark fw-semibold"><?php echo esc_html($phone2); ?></a>
+                <?php endif; ?>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-4 p-4 border shadow-sm" style="border-color: var(--sand-300) !important;">
+              <h3 class="h6 fw-bold text-uppercase text-terracotta mb-2"><?php esc_html_e('Email', 'ichapore-swapnapuron'); ?></h3>
+              <a href="mailto:<?php echo esc_attr($email); ?>" class="text-decoration-none text-dark fw-semibold text-break">
+                <?php echo esc_html($email); ?>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="bg-white rounded-4 p-4 p-sm-5 border shadow-sm" style="border-color: var(--sand-300) !important;">
+            <h3 class="h4 fw-extrabold mb-1"><?php esc_html_e('Send Us a Message', 'ichapore-swapnapuron'); ?></h3>
+            <p class="text-muted small mb-4"><?php esc_html_e('Have questions about volunteering, donations, or community programs? Write to us directly.', 'ichapore-swapnapuron'); ?></p>
+            <form id="contact-form" onsubmit="handleHomeContactSubmit(event)">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label class="form-label small fw-bold text-uppercase text-secondary"><?php esc_html_e('First Name *', 'ichapore-swapnapuron'); ?></label>
+                  <input type="text" class="form-control" placeholder="First name" required>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label small fw-bold text-uppercase text-secondary"><?php esc_html_e('Last Name *', 'ichapore-swapnapuron'); ?></label>
+                  <input type="text" class="form-control" placeholder="Last name" required>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label small fw-bold text-uppercase text-secondary"><?php esc_html_e('Email *', 'ichapore-swapnapuron'); ?></label>
+                  <input type="email" class="form-control" placeholder="you@example.com" required>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label small fw-bold text-uppercase text-secondary"><?php esc_html_e('Phone *', 'ichapore-swapnapuron'); ?></label>
+                  <input type="tel" class="form-control" placeholder="+91 98000 00000" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label small fw-bold text-uppercase text-secondary"><?php esc_html_e('Address', 'ichapore-swapnapuron'); ?></label>
+                  <input type="text" class="form-control" placeholder="Your city / neighborhood">
+                </div>
+                <div class="col-12">
+                  <label class="form-label small fw-bold text-uppercase text-secondary"><?php esc_html_e('Additional Information', 'ichapore-swapnapuron'); ?></label>
+                  <textarea class="form-control" rows="4" placeholder="Tell us how you would like to connect or help..."></textarea>
+                </div>
+                <div class="col-12 pt-2">
+                  <button type="submit" class="btn btn-dark rounded-pill px-5 py-3 fw-bold text-uppercase w-100 w-sm-auto" style="font-size:0.78rem; letter-spacing:0.06em;">
+                    <?php esc_html_e('Submit Message', 'ichapore-swapnapuron'); ?>
+                  </button>
+                </div>
+              </div>
+              <div id="contact-success" class="alert alert-success mt-3 mb-0 d-none" role="alert">
+                <?php esc_html_e('Thank you for reaching out! Our team will contact you shortly, or you can call us at +91 83360 66390.', 'ichapore-swapnapuron'); ?>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    const impactDescriptions = {
+      500: "<strong>₹500</strong> supports learning materials, notebooks, and mentorship for street children in our education program.",
+      1500: "<strong>₹1,500</strong> helps fund Thalassemia awareness, screening, and patient support under Project Udaan.",
+      2500: "<strong>₹2,500</strong> supports women's preventive health checkups and essential medicines in underserved communities.",
+      5000: "<strong>₹5,000</strong> powers community-wide winter relief kits (Smile with Santa) and outreach across slum clusters."
+    };
+
+    function selectHomeAmount(amt, el) {
+      document.querySelectorAll('.amount-btn').forEach(btn => btn.classList.remove('active'));
+      if (el) el.classList.add('active');
+      const input = document.getElementById('custom-amt-input');
+      if (input) input.value = '';
+      const desc = document.getElementById('impact-description');
+      if (desc && impactDescriptions[amt]) desc.innerHTML = impactDescriptions[amt];
+    }
+
+    function handleHomeCustomAmount(val) {
+      if (!val || val <= 0) return;
+      document.querySelectorAll('.amount-btn').forEach(btn => btn.classList.remove('active'));
+      const desc = document.getElementById('impact-description');
+      if (desc) {
+        desc.innerHTML = `<strong>₹${val}</strong> will directly support Ichapore Swapnapuron Society's education, healthcare, and community relief programs.`;
+      }
+    }
+
+    function setHomeFreq(type) {
+      document.getElementById('freq-monthly').classList.toggle('active', type === 'monthly');
+      document.getElementById('freq-once').classList.toggle('active', type === 'once');
+    }
+
+    function handleHomeContactSubmit(e) {
+      e.preventDefault();
+      document.getElementById('contact-success').classList.remove('d-none');
+      e.target.reset();
+    }
+  </script>
 
 <?php
 get_footer();
