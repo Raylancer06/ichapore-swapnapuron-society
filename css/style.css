@@ -324,6 +324,106 @@ body {
   box-shadow: 0 0 0 0.2rem rgba(194, 58, 34, 0.15);
 }
 
+/* Donation Page Elements */
+.donation-card {
+  background: #ffffff;
+  border: 1px solid var(--sand-300);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.tier-tile {
+  cursor: pointer;
+  border: 2px solid var(--sand-300);
+  border-radius: 1rem;
+  padding: 1rem 0.75rem;
+  text-align: center;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #fff;
+  user-select: none;
+}
+
+.tier-tile:hover {
+  border-color: var(--terracotta-500);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(220, 62, 38, 0.08);
+}
+
+.tier-tile.active {
+  border-color: var(--terracotta-500);
+  background-color: var(--terracotta-50);
+  box-shadow: 0 0 0 3px rgba(220, 62, 38, 0.15);
+}
+
+.tier-tile.active .tier-amount {
+  color: var(--terracotta-600) !important;
+}
+
+.copy-badge-btn {
+  border: 1px dashed var(--sand-400);
+  background: rgba(255, 255, 255, 0.1);
+  color: inherit;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.copy-badge-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+}
+
+.qr-box {
+  background: #ffffff;
+  border: 2px dashed #e2d9cd;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.trust-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 2rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: var(--sand-100);
+  border: 1px solid var(--sand-300);
+  color: var(--charcoal-800);
+}
+
+.accordion-editorial .accordion-item {
+  border: 1px solid var(--sand-300);
+  border-radius: 0.75rem !important;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  background: #fff;
+}
+
+.accordion-editorial .accordion-button {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--charcoal-900);
+  background: #fff;
+  padding: 1.1rem 1.25rem;
+}
+
+.accordion-editorial .accordion-button:not(.collapsed) {
+  color: var(--terracotta-600);
+  background-color: var(--sand-50);
+  box-shadow: none;
+}
+
+.accordion-editorial .accordion-button:focus {
+  box-shadow: none;
+  border-color: var(--sand-300);
+}
+
 @media (min-width: 576px) {
   .w-sm-auto { width: auto !important; }
 }
